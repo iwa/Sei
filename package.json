@@ -1,0 +1,14 @@
+{
+  "name": "obsidian-sei",
+  "version": "1.0.0",
+  "description": "Personal theme for Obsidian, designed for clearness & simplicity.",
+  "author": "iwa",
+  "license": "MIT",
+  "scripts": {
+    "compile": "sass ./src/theme.scss theme.css --no-source-map --no-charset",
+    "watch": "sass ./src/theme.scss theme.css --no-source-map --no-charset --watch"
+  },
+  "dependencies": {
+    "sass": "^1.83.4"
+  }
+}
