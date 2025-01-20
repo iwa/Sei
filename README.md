@@ -6,11 +6,10 @@ Personal theme for Obsidian, designed with clarity and simplicity in mind.
 
 ## 📖 Introduction
 
-**Sei is my personal Obsidian theme.** While I may add some customization options in the future, it might not quite fit your needs. Please keep that in mind :)
+**Sei is my personal Obsidian theme.** While I may add some customization options in the future, the theme might not quite fit your needs. Please keep that in mind :)
 
 This theme began as a hard fork of the Cupertino theme, and has now almost been completely reworked.
-Some elements have been kept pratically unchanged because the spirit Cupertino's author conveys is the closest to what I'm looking for in an Obsidian theme.<br/>
-I'm always looking to make the "perfect theme" for me, incorporating many great features I used over the years with a lot of themes.
+Some elements have been kept pratically unchanged because the spirit Cupertino's author conveys is the closest to what I'm looking for in an Obsidian theme.
 
 > [!important]
 > Some parts of the code have been adapted from other themes, **they are all credited below.**<br/>
