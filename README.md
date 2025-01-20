@@ -2,6 +2,8 @@
 
 Personal theme for Obsidian, designed with clarity and simplicity in mind.
 
+![](/assets/banner.jpg)
+
 ## 📖 Introduction
 
 **Sei is my personal Obsidian theme.** While I may add some customization options in the future, it might not quite fit your needs. Please keep that in mind :)
