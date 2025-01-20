@@ -22,13 +22,13 @@ Currently WIP, I might try to get the theme on the Obdisian store for convinienc
 
 Below is the list of themes I took inspiration from and adapted some of their features in my theme:
 
-- Cupertino
+- [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)
   - Hard fork
-- Minimal
-  - Adapted the Inline labels navigation feature
-- AnuPpuccin
+- [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin)
   - Lots of inspiration from their Cards layout
   - Adapted their custom checkboxes
+- [Minimal](https://github.com/kepano/obsidian-minimal)
+  - Adapted the Inline labels navigation feature
 
 ## 📜 License
 
