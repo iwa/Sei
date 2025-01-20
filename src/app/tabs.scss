@@ -1,7 +1,7 @@
 // Define how tabs looks
 
 body:not(.is-phone) {
-    &.workspace .mod-root {
+    .workspace .mod-root {
         .workspace-tab-header-container-inner {
             flex-grow: 1;
         }
