@@ -12,7 +12,7 @@ This theme began as a hard fork of the Cupertino theme, and has now almost been 
 Some elements have been kept pratically unchanged because the spirit Cupertino's author conveys is the closest to what I'm looking for in an Obsidian theme.
 
 > [!important]
-> Some parts of the code have been adapted from other themes, **they are all credited below.**<br/>
+> Some parts of the code have been adapted from other themes, <u>**they are all credited below.**</u><br/>
 > If you like those features in particular, please support the original authors.
 
 ## 🛠️ Installation
