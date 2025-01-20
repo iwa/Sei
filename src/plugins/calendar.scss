@@ -1,0 +1,34 @@
+#calendar-container {
+    padding: 0;
+
+    .title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .right-nav {
+        align-items: center;
+    }
+
+    .day {
+        border-radius: var(--radius-m);
+        border: 1px solid transparent;
+        padding: 6px;
+    }
+
+    .today {
+        background-color: transparent;
+        color: var(--color-text-today);
+        font-weight: bold;
+    }
+
+    .day:hover {
+        background-color: var(--interactive-hover);
+    }
+
+    .active {
+        background-color: transparent;
+        border: 1px solid var(--interactive-accent);
+    }
+}

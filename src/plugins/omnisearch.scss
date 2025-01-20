@@ -1,0 +1,56 @@
+.omnisearch-result>div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.omnisearch-result__icon {
+    display: none;
+}
+
+.omnisearch-result__title {
+    align-items: baseline;
+    width: 100%;
+}
+
+.omnisearch-result__extension {
+    flex-grow: 1;
+}
+
+.omnisearch-result__body {
+    margin: 0;
+    width: 100%;
+}
+
+.omnisearch-highlight {
+    text-decoration: none;
+}
+
+body.is-phone .omnisearch-modal {
+    .omnisearch-input-field {
+        border-bottom: var(--border-width) solid var(--background-modifier-border);
+        width: 100%;
+
+        input.prompt-input {
+            margin: 0;
+            padding-right: 120px;
+        }
+    }
+
+    .omnisearch-input-container__buttons {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        padding: 0;
+        width: unset;
+
+        button {
+            border-radius: 10000px !important;
+        }
+    }
+
+    .omnisearch-highlight {
+        color: var(--text-accent);
+    }
+}

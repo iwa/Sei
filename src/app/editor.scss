@@ -1,0 +1,218 @@
+// Define how editor looks
+
+.markdown-reading-view,
+.markdown-source-view {
+    transition: var(--anim-duration-fast) ease-in-out;
+}
+
+.markdown-preview-view {
+    scrollbar-gutter: auto;
+}
+
+.mod-root .workspace-leaf-content[data-mode="source"] .view-header .view-actions button:nth-last-child(2) {
+    background-color: var(--interactive-accent) !important;
+    color: var(--text-on-accent) !important;
+}
+
+.workspace-leaf-content[data-mode="source"] .markdown-reading-view {
+    transform: scale(0.99);
+}
+
+.workspace-leaf-content[data-mode="preview"] .markdown-source-view {
+    transform: scale(0.99);
+}
+
+.workspace-tabs {
+    overflow: visible;
+}
+
+.workspace-tabs.mod-top {
+    overflow: visible;
+}
+
+.mod-fade::before,
+.mod-fade::after {
+    display: none;
+}
+
+
+img {
+    border-radius: var(--radius-s);
+}
+
+svg.svg-icon {
+    fill: none;
+}
+
+.markdown-rendered code,
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+    border: var(--border-width) solid var(--background-modifier-border);
+    padding: 2px 4px;
+}
+
+.markdown-rendered button.copy-code-button,
+.markdown-source-view.mod-cm6 .edit-block-button,
+.code-block-flair {
+    top: 4px;
+    margin: 0;
+    box-shadow: none !important;
+    padding: 8px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+}
+
+.markdown-reading-view .markdown-rendered button.copy-code-button {
+    inset-inline-end: 4px;
+}
+
+.markdown-source-view .markdown-rendered button.copy-code-button {
+    inset-inline-end: 36px;
+}
+
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+    border-radius: var(--radius-s);
+    padding: 1px 4px;
+    color: var(--color-orange);
+}
+
+// Dashed border below editor top-bar
+.view-header {
+    border-bottom: 1px dashed var(--background-modifier-border);
+}
+
+
+body .markdown-source-view .cm-active:not(:has(.cm-fold-indicator):hover)::after {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -12px;
+    border-left: 4px solid var(--background-modifier-border-hover);
+    border-radius: var(--input-radius);
+    content: "";
+}
+
+
+
+body:not(.is-phone) {
+    .view-header {
+        flex-shrink: 0;
+        padding: 0 8px;
+        height: var(--view-header-height);
+    }
+
+    .view-header-title-parent .view-header-breadcrumb,
+    .view-header-title-parent .view-header-breadcrumb-separator {
+        opacity: 0.5;
+        color: var(--text-muted);
+    }
+}
+
+body:not(.is-mobile) {
+    // todo maybe remove box-shadow if it doesnt look good
+    &.theme-light .mod-root .workspace-tab-container {
+        border: var(--border-width) solid var(--background-modifier-hover);
+        box-shadow:  rgba(0, 0, 0, 0.04) 0px 24px 48px, rgba(0, 0, 0, 0.02) 0px 4px 16px;
+    }
+
+    &.theme-dark .mod-root .workspace-tab-container {
+        border: var(--border-width) solid var(--background-modifier-hover);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
+    }
+
+    .view-header button {
+        padding: 4px 12px;
+    }
+
+    .workspace .mod-root .workspace-tabs:not(:only-of-type) .workspace-tab-container {
+        margin: 0 !important;
+    }
+
+    .mod-root .workspace-tab-container {
+        margin-bottom: 8px;
+        border-radius: var(--radius-m);
+    }
+
+    &:not(.show-ribbon) .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tab-container {
+        margin-left: 8px;
+        border-radius: var(--radius-m);
+    }
+
+    .workspace:not(.is-right-sidedock-open) .mod-root .workspace-tab-container {
+        margin-right: 8px;
+        border-radius: var(--radius-m);
+    }
+
+    /* Auto Focus Mode */
+    .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) {
+        background-color: var(--background-primary);
+
+        .workspace-tab-container {
+            margin: 0 !important;
+            box-shadow: none !important;
+            border: 0px solid transparent !important;
+            border-radius: 0;
+        }
+
+        .workspace-ribbon:not(:hover),
+        .workspace-tab-header-container:not(:hover),
+        .view-header:not(:hover) {
+            opacity: 0.5;
+            transition: var(--anim-duration-fast);
+        }
+
+        .view-header,
+        .view-content {
+            background-color: transparent;
+        }
+    }
+}
+
+body.is-mobile {
+    .mod-root .view-content {
+        background-color: var(--background-primary);
+    }
+
+    .markdown-preview-view .task-list-item-checkbox {
+        top: 0.25em;
+        margin-inline-start: calc((var(--checkbox-size) + 8px) * -1);
+        margin-inline-end: 10px;
+    }
+}
+
+body.is-phone {
+
+    div:not(.markdown-embed-content)>.markdown-preview-view:first-child,
+    div:not(.markdown-embed-content)>.cm-sizer:first-child {
+        padding-top: calc(var(--safe-area-inset-top) + var(--view-header-height) + 16px);
+    }
+
+    .mod-root .view-content>div:not(.markdown-source-view):not(.markdown-reading-view):not(.canvas-wrapper):not(.empty-state) {
+        padding-top: calc(var(--safe-area-inset-top) + var(--view-header-height));
+    }
+}
+
+body.is-tablet {
+
+    div:not(.markdown-embed-content)>.markdown-preview-view:first-child,
+    div:not(.markdown-embed-content)>.cm-sizer:first-child {
+        padding-top: calc(var(--safe-area-inset-top) + var(--header-height) + var(--view-header-height) + 16px);
+    }
+
+    .mod-root .view-content>div:not(.markdown-source-view):not(.markdown-reading-view):not(.canvas-wrapper):not(.empty-state) {
+        padding-top: calc(var(--safe-area-inset-top) + var(--header-height) + var(--view-header-height));
+    }
+
+    .mod-root .workspace-leaf {
+        contain: none !important;
+    }
+
+    .view-header {
+        padding: 0 16px;
+
+        button {
+            height: 100%;
+        }
+    }
+}

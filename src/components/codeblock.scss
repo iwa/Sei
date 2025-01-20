@@ -1,0 +1,15 @@
+body {
+    --code-white-space: pre-wrap;
+    --code-size: var(--font-smaller);
+    --code-background: var(--background-primary-alt);
+    --code-normal: var(--text-muted);
+    --code-comment: var(--text-faint);
+    --code-function: var(--color-orange);
+    --code-important: var(--color-orange);
+    --code-keyword: var(--color-red);
+    --code-property: var(--color-blue);
+    --code-punctuation: var(--text-muted);
+    --code-string: var(--color-cyan);
+    --code-tag: var(--color-red);
+    --code-value: var(--color-purple);
+}

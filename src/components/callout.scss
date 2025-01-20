@@ -1,0 +1,39 @@
+body {
+    --callout-padding: 16px;
+    --callout-radius: var(--radius-s);
+}
+
+.callout {
+    background-color: rgba(var(--callout-color), 0.15);
+    border-left: var(--size-2-3) solid rgba(var(--callout-color), 0.9);
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    pre {
+        border: var(--border-width) solid var(--background-modifier-border);
+    }
+
+    .callout-title {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .callout-title-inner {
+        --p-spacing: 0;
+    }
+
+    .callout-icon svg.svg-icon {
+        --icon-size: var(--icon-s);
+    }
+
+    .callout-content>*:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .callout-content .callout {
+        border: var(--border-width) solid var(--background-modifier-border);
+        background-color: transparent;
+    }
+}

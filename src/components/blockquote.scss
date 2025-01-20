@@ -1,0 +1,11 @@
+body {
+    --blockquote-border-color: var(--color-base-50);
+    --blockquote-border-thickness: 2px;
+    --blockquote-font-style: normal;
+    --blockquote-color: inherit;
+    --blockquote-background-color: var(--background-secondary);
+}
+
+.markdown-rendered blockquote {
+    padding: 5px 5px 5px 15px;
+}

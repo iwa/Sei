@@ -1,0 +1,19 @@
+.graph-controls.is-close {
+    backdrop-filter: blur(50px);
+    border: var(--border-width) solid var(--background-modifier-border);
+    background-color: rgb(from var(--background-secondary) r g b / 50%);
+    padding: 0;
+}
+
+.graph-controls-button {
+    padding: 8px;
+}
+
+.graph-controls-button.mod-open {
+    border-bottom: var(--border-width) solid var(--background-modifier-border);
+    border-radius: 0;
+}
+
+.graph-controls-button.mod-animate {
+    margin: 0 !important;
+}

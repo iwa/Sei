@@ -1,0 +1,8 @@
+.home-tab-searchbar {
+    padding: 0 !important;
+    height: calc(var(--input-height) * 1.5) !important;
+
+    input[type="search"] {
+        box-shadow: none !important;
+    }
+}

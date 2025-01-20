@@ -1,0 +1,23 @@
+.tasks-modal {
+    .accesskey {
+        text-decoration: none;
+    }
+
+    hr {
+        visibility: hidden;
+    }
+
+    .tasks-modal-priority-section,
+    .tasks-modal-dates-section,
+    .tasks-modal-dependencies-section {
+        box-sizing: border-box;
+        border: var(--border-width) solid var(--background-modifier-border);
+        border-radius: var(--radius-m);
+        background-color: var(--background-primary);
+        padding: 12px 16px;
+    }
+
+    .tasks-modal-button-section {
+        background-color: transparent;
+    }
+}

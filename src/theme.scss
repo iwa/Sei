@@ -1,0 +1,79 @@
+@use "style-settings-config.scss";
+
+// Color schemes
+@use "colors/light.scss";
+@use "colors/dark.scss";
+
+@use "app/animations.scss";
+
+// Theme
+@use "app/workspace.scss";
+@use "app/workspace-drawer-vault.scss";
+
+@use "app/general.scss";
+
+@use "app/sidebar.scss";
+@use "app/ribbon.scss";
+@use "app/tabs.scss";
+
+@use "app/editor.scss";
+
+@use "app/menu.scss";
+@use "app/tooltip.scss";
+
+
+// Components
+@use "components/frontmatter.scss";
+@use "components/inputs.scss";
+@use "components/headers.scss";
+@use "components/codeblock.scss";
+@use "components/callout.scss";
+@use "components/table.scss";
+@use "components/checkbox.scss";
+@use "components/modal.scss";
+@use "components/prompt.scss";
+@use "components/blockquote.scss";
+
+// Features
+@use "app/new-tab.scss";
+@use "app/labeled-nav.scss";
+@use "app/settings.scss";
+@use "app/notice.scss";
+@use "app/status-bar.scss";
+
+
+// Mobile
+@use "app/mobile/top-bar.scss";
+@use "app/mobile/pull-action.scss";
+@use "app/mobile/mobile-navbar.scss";
+@use "app/mobile/image-viewer.scss";
+
+
+// Plugins
+@use "plugins/canvas.scss";
+@use "plugins/graph.scss";
+@use "plugins/backlinks.scss";
+@use "plugins/outline.scss";
+
+@use "plugins/style-settings.scss";
+@use "plugins/linter.scss";
+@use "plugins/kanban.scss";
+@use "plugins/tasks.scss";
+@use "plugins/calendar.scss";
+@use "plugins/ink.scss";
+@use "plugins/note-toolbar.scss";
+@use "plugins/omnisearch.scss";
+@use "plugins/trash-explorer.scss";
+@use "plugins/dataview.scss";
+@use "plugins/tldraw.scss";
+@use "plugins/excalidraw.scss";
+@use "plugins/folder-notes.scss";
+@use "plugins/advanced-tables.scss";
+@use "plugins/map-view.scss";
+@use "plugins/settings-search.scss";
+@use "plugins/editing-toolbar.scss";
+@use "plugins/quiz-generator.scss";
+@use "plugins/execute-code.scss";
+@use "plugins/home-tab.scss";
+@use "plugins/projects.scss";
+@use "plugins/oz-calendar.scss";

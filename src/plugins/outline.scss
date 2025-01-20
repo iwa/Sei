@@ -1,0 +1,28 @@
+body.is-mobile {
+    .workspace-drawer .workspace-leaf-content[data-type="outline"] .view-content>div {
+        padding: 0 0 0 16px !important;
+
+        .tree-item-children {
+            border: none;
+        }
+
+        .tree-item-self.is-active .tree-item-icon.collapse-icon {
+            background-color: var(--text-normal);
+
+            svg.svg-icon {
+                color: var(--nav-item-background-active);
+            }
+        }
+
+        .tree-item-icon.collapse-icon {
+            border-radius: var(--radius-l);
+            background-color: var(--background-modifier-border);
+            width: 24px;
+            height: 24px;
+        }
+
+        .tree-item-inner {
+            padding-left: 16px;
+        }
+    }
+}

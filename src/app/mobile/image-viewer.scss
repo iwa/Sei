@@ -1,0 +1,10 @@
+body.is-mobile {
+    .mobile-image-viewer {
+        animation: var(--anim-duration-fast) fadeInScale;
+        background-color: var(--background-secondary);
+    }
+
+    .mobile-image-viewer img {
+        border-radius: 0;
+    }
+}

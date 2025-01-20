@@ -1,0 +1,24 @@
+body.is-mobile {
+
+    .backlink-pane,
+    .outgoing-link-pane {
+        padding-bottom: unset;
+        overflow: visible;
+    }
+}
+
+body.is-mobile .embedded-backlinks {
+    .backlink-pane>.tree-item-self {
+        height: var(--input-height);
+    }
+
+    .nav-action-button.is-active {
+        opacity: 1;
+        background-color: var(--interactive-accent);
+        color: white;
+    }
+
+    .search-input-container {
+        width: calc(100% - 188px);
+    }
+}

@@ -1,0 +1,20 @@
+// "Notifications" shown by default in the top right corner
+
+.notice-container {
+    display: flex;
+    top: var(--view-header-height);
+    flex-direction: column;
+    gap: 8px;
+    overflow: visible;
+}
+
+.notice {
+    margin-bottom: 0;
+    box-shadow: var(--shadow-s);
+    border: var(--border-width) solid var(--background-modifier-hover);
+    border-radius: var(--radius-l);
+    background-color: var(--modal-background);
+    padding: 14px 18px;
+    overflow: hidden;
+    color: var(--text-muted);
+}

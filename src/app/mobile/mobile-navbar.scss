@@ -1,0 +1,104 @@
+body.is-mobile {
+    &.theme-light .mobile-toolbar {
+        background-color: rgb(209, 211, 218);
+    }
+
+    &.theme-dark .mobile-toolbar {
+        background-color: rgb(43, 43, 43);
+    }
+
+    .mobile-navbar,
+    .workspace-drawer .nav-header {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: var(--layer-status-bar);
+        border: none;
+        background-color: transparent;
+        padding: 4px max(var(--safe-area-inset-right), 16px) max(4px, var(--safe-area-inset-bottom)) max(var(--safe-area-inset-left), 16px);
+    }
+
+    .mobile-navbar::before {
+        z-index: -2 !important;
+    }
+
+    .mobile-navbar::before,
+    .mobile-navbar::after {
+        position: absolute;
+        z-index: -1;
+        mask: linear-gradient(180deg, rgb(0% 0% 0% / 0) 0%, rgb(0% 0% 0% / 0.009607359798384785) 6.25%, rgb(0% 0% 0% / 0.03806023374435663) 12.5%, rgb(0% 0% 0% / 0.08426519384872738) 18.75%, rgb(0% 0% 0% / 0.1464466094067262) 25%, rgb(0% 0% 0% / 0.22221488349019886) 31.25%, rgb(0% 0% 0% / 0.3086582838174551) 37.5%, rgb(0% 0% 0% / 0.40245483899193585) 43.75%, rgb(0% 0% 0% / 0.49999999999999994) 50%, rgb(0% 0% 0% / 0.5975451610080641) 56.25%, rgb(0% 0% 0% / 0.6913417161825448) 62.5%, rgb(0% 0% 0% / 0.777785116509801) 68.75%, rgb(0% 0% 0% / 0.8535533905932737) 75%, rgb(0% 0% 0% / 0.9157348061512727) 81.25%, rgb(0% 0% 0% / 0.9619397662556434) 87.5%, rgb(0% 0% 0% / 0.9903926402016152) 93.75%, rgb(0% 0% 0%) 100%);
+        inset: -32px 0 0;
+        pointer-events: none;
+        content: "";
+    }
+
+    .mobile-navbar-action {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile-navbar-tabs-action {
+        border-width: var(--icon-l-stroke-width);
+        border-radius: 30%;
+        width: calc(var(--icon-size) - 2px);
+        height: calc(var(--icon-size) - 2px);
+    }
+
+    .mobile-toolbar-option {
+        color: var(--text-normal);
+    }
+
+    .mobile-toolbar-options-list {
+        padding: 0;
+    }
+
+    .mobile-tab-switcher {
+        backdrop-filter: blur(50px);
+    }
+
+    .mobile-tab-switcher-menubar {
+        padding: 4px max(var(--safe-area-inset-right), 16px) max(4px, var(--safe-area-inset-bottom)) max(var(--safe-area-inset-left), 16px);
+    }
+
+    .nav-buttons-container {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .nav-action-button {
+        flex-grow: 0 !important;
+    }
+
+    &.theme-dark {
+
+        .workspace-drawer .nav-header .nav-buttons-container {
+            background-color: var(--background-secondary-alt);
+            box-shadow: var(--shadow-s);
+            border-radius: var(--radius-m);
+        }
+    }
+}
+
+// todo below, to remove?
+body.is-phone {
+    &.theme-light {
+        .mobile-navbar::after {
+            background-color: rgb(from var(--background-primary) r g b / 50%);
+        }
+
+        .workspace-drawer .nav-header {
+            background-color: rgb(from var(--background-secondary) r g b / 50%);
+        }
+    }
+}
+
+body.is-tablet {
+    &.theme-dark .workspace-drawer .nav-header {
+        background-color: rgb(from var(--background-primary-alt) r g b / 75%);
+    }
+
+    .nav-buttons-container {
+        padding: 0;
+    }
+}

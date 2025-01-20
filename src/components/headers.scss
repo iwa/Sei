@@ -1,0 +1,68 @@
+body {
+    /* Colors */
+    --h1-color: rgb(166, 227, 161);
+    --h2-color: rgb(148, 226, 213);
+    --h3-color: rgb(137, 220, 235);
+    --h4-color: rgb(116, 199, 236);
+    --h5-color: rgb(135, 176, 249);
+    --h6-color: rgb(135, 176, 249);
+
+    /* Font size */
+    --h1-font: inherit;
+    --h2-font: inherit;
+    --h3-font: inherit;
+    --h4-font: inherit;
+    --h5-font: inherit;
+    --h6-font: inherit;
+
+    --h1-line-height: 1.2;
+    --h2-line-height: 1.2;
+    --h3-line-height: 1.3;
+    --h4-line-height: 1.4;
+    --h5-line-height: var(--line-height-normal);
+    --h6-line-height: var(--line-height-normal);
+
+    --h1-size: 1.802em;
+    --h2-size: 1.602em;
+    --h3-size: 1.424em;
+    --h4-size: 1.266em;
+    --h5-size: 1.125em;
+    --h6-size: 1em;
+
+    --h1-style: normal;
+    --h2-style: normal;
+    --h3-style: normal;
+    --h4-style: normal;
+    --h5-style: normal;
+    --h6-style: normal;
+
+    --h1-variant: normal;
+    --h2-variant: normal;
+    --h3-variant: normal;
+    --h4-variant: normal;
+    --h5-variant: normal;
+    --h6-variant: normal;
+
+    --h1-weight: 700;
+    --h2-weight: 600;
+    --h3-weight: 600;
+    --h4-weight: 600;
+    --h5-weight: 600;
+    --h6-weight: 600;
+}
+
+// Match Inline title with H1 style
+// Add bar below H1 & Inline title
+.inline-title {
+    font-size: var(--h1-size);
+    color: var(--text-normal);
+    margin-bottom: 24px;
+    border-bottom: var(--hr-thickness) solid var(--hr-color);
+    padding-bottom: 16px;
+}
+
+h1,
+.HyperMD-header-1 {
+    border-bottom: var(--hr-thickness) solid var(--hr-color);
+    padding-bottom: 16px !important;
+}

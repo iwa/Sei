@@ -1,0 +1,262 @@
+body:not(.is-phone) {
+
+    .modal,
+    .vertical-tab-content,
+    .community-modal-details {
+        background-color: var(--modal-background);
+    }
+
+    .modal {
+        box-shadow: var(--shadow-l);
+
+        .vertical-tab-header {
+            background-color: transparent;
+        }
+
+        .vertical-tab-content-container,
+        .community-modal-details {
+            margin: 1px 1px 1px 0;
+            border-radius: 0 var(--modal-radius) var(--modal-radius) 0;
+        }
+
+        .modal-sidebar {
+            background-color: transparent;
+        }
+
+        .installed-plugins-container {
+            border: none;
+            padding: 0;
+        }
+    }
+}
+
+body:not(.is-mobile) {
+
+    &.theme-light .modal.mod-settings .setting-item:not(.setting-item-heading) {
+        border: var(--border-width) solid rgba(0, 0, 0, 0.05);
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    &.theme-dark .modal.mod-settings .setting-item:not(.setting-item-heading) {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .modal:not(.mod-community-modal), // todo which one to keep?
+    .modal.mod-settings {
+        .vertical-tab-header-group-title {
+            padding: 8px 12px; // align subtitles in settings sidebar with elements
+        }
+
+        .vertical-tab-nav-item { // style spécial selection in settings sidebar
+            position: relative;
+            padding: 6px 12px;
+
+            &.is-active {
+                --background-modifier-hover: unset;
+                background-color: var(--background-modifier-hover);
+                color: var(--text-normal);
+            }
+        }
+
+        .setting-item-heading {
+            border: none;
+            padding: 20px 0 12px 0;
+        }
+
+        .setting-item-heading .setting-item-name {
+            font-size: var(--font-ui-large);
+        }
+
+        .setting-item:not(.setting-item-heading) {
+            border-radius: var(--radius-m);
+            padding: 14px 18px;
+        }
+
+        .setting-item:not(:last-child):not(.setting-item-heading) {
+            margin-bottom: 3px;
+        }
+
+        .setting-item-info:has(.setting-item-name:empty) .setting-item-description {
+            padding: 0;
+        }
+    }
+
+    .mobile-option-setting-item {
+        border: var(--border-width) solid var(--background-modifier-border);
+        border-radius: var(--radius-s);
+        padding: 12px 16px;
+    }
+}
+
+body.is-mobile {
+    .setting-item-control {
+        align-items: center;
+    }
+}
+
+body.is-phone {
+
+    &.theme-light .modal.mod-settings,
+    &.theme-light .modal.mod-community-modal {
+
+        .modal-header,
+        .vertical-tab-header,
+        .vertical-tab-content,
+        .modal-sidebar,
+        .community-modal-details {
+            background-color: var(--background-secondary);
+        }
+    }
+
+    &.theme-dark .modal.mod-settings,
+    &.theme-dark .modal.mod-community-modal {
+
+        .modal-header,
+        .vertical-tab-header,
+        .vertical-tab-content,
+        .modal-sidebar,
+        .community-modal-details {
+            background-color: var(--background-primary);
+        }
+    }
+
+    .modal.mod-settings,
+    .modal.mod-community-modal {
+        --divider-color: var(--background-primary);
+        background-color: transparent;
+
+        .modal-header,
+        .modal-sidebar {
+            border: none !important;
+        }
+
+        .vertical-tab-header,
+        .vertical-tab-content {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        .vertical-tab-nav-item {
+            height: unset;
+            min-height: 48px;
+            word-break: break-word;
+        }
+
+        .vertical-tab-header-group-title {
+            padding: 8px;
+            color: var(--text-faint);
+            font-weight: normal;
+            font-size: var(--font-ui-small);
+            text-transform: uppercase;
+        }
+
+        .vertical-tab-header-group-items {
+            border-radius: var(--input-radius);
+            background-color: var(--interactive-normal);
+            overflow: hidden;
+        }
+
+        .community-modal-search-results-wrapper {
+            border: none;
+            padding: 0 16px;
+        }
+
+        .community-modal-search-results {
+            gap: 8px;
+        }
+
+        .community-item {
+            border: none;
+            border-radius: var(--input-radius);
+            background-color: var(--interactive-normal);
+        }
+
+        .community-modal-details {
+            background-color: var(--background-secondary);
+        }
+    }
+
+    .setting-item {
+        border: none;
+    }
+
+    .setting-item:not(.mod-toggle) .setting-item-info {
+        padding: 0 8px;
+    }
+
+    .setting-item.mod-toggle,
+    .setting-item-control .mobile-option-setting-item {
+        border-radius: var(--input-radius);
+        background-color: var(--interactive-normal) !important;
+        padding: 12px 16px;
+    }
+
+    .setting-item.mod-toggle:has(+ .setting-item.mod-toggle) {
+        border-bottom: var(--border-width) solid var(--background-modifier-border);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .setting-item.mod-toggle+.setting-item.mod-toggle {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .setting-item-control .clickable-icon {
+        background-color: var(--interactive-normal);
+        min-width: var(--input-height);
+        height: var(--input-height);
+    }
+
+    .setting-item-control:not(:has(:not(button))) {
+        flex-direction: column;
+        gap: 0;
+        border-radius: var(--input-radius);
+        overflow: hidden;
+    }
+
+    .setting-item-control:not(:has(:not(button)))>button {
+        border-radius: 0;
+
+        &:not(:last-child) {
+            border-bottom: var(--border-width) solid var(--background-modifier-border);
+        }
+    }
+}
+
+body.is-tablet {
+    .modal:not(.mod-community-modal) {
+
+        textarea,
+        input[type="text"]:not(.metadata-container input):not(.prompt input),
+        input[type="number"],
+        input[type="search"]:not(.search-input-container > input),
+        button:not(.clickable-icon),
+        select,
+        .dropdown {
+            background-color: var(--background-secondary);
+        }
+
+        button.mod-cta {
+            color: var(--text-accent);
+        }
+
+        .setting-item:not(.setting-item-heading) {
+            border-right: none;
+            border-left: none;
+        }
+
+        .setting-item-heading+.setting-item,
+        *:not(.setting-item)+.setting-item,
+        .setting-item:first-child:not(.setting-item-heading) {
+            border-top: none;
+        }
+
+        .setting-item:has(+ .setting-item-heading),
+        .setting-item:has(+ *:not(.setting-item)):not(.setting-item-heading),
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+    }
+}

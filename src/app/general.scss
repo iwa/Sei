@@ -1,0 +1,171 @@
+body {
+    --file-line-width: 768px; // wider reading space
+
+    --background-modifier-border: var(--divider-color);
+    --background-modifier-border-focus: hsla(var(--interactive-accent-hsl), 0.5);
+    --background-modifier-message: var(--background-secondary);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.05);
+
+    --caret-color: var(--text-accent); // text cursor
+
+    --divider-color-hover: var(--text-normal);
+
+    --dropdown-background-size: var(--icon-s);
+    --dropdown-padding: 4px 16px 4px 8px;
+
+    --embed-border-start: none;
+
+    --input-radius: var(--radius-m);
+
+    --line-height-normal: 1.6;
+
+    --link-decoration: none;
+    --link-external-decoration: none;
+
+    --list-spacing: 0.1em;
+
+    --metadata-padding: 0;
+    --metadata-property-radius-focus: var(--input-radius);
+    --metadata-property-radius-hover: var(--input-radius);
+    --metadata-property-radius: var(--input-radius);
+
+    --nav-item-color: var(--text-normal);
+    --nav-item-padding: 5px 8px 5px 24px; // Fix nav item size
+
+    // Rework padding on tags pill
+    --tag-padding-x: 8px;
+    --tag-padding-y: 2px;
+
+    --prompt-border-color: var(--modal-border-color);
+
+    --radius-s: 4px;
+    --radius-m: 6px;
+    --radius-l: 10px;
+    --radius-xl: 16px;
+
+    --ribbon-background-collapsed: transparent;
+    --ribbon-background: transparent;
+    --ribbon-padding: 4px 8px;
+    --ribbon-width: 56px;
+
+    --search-icon-size: var(--icon-s);
+
+    --slider-track-height: 4px;
+    --slider-track-background: var(--background-modifier-border-hover);
+
+    --tab-background-active: var(--background-primary-alt);
+    --tab-container-background: transparent;
+    --tab-divider-color: transparent;
+    --tab-max-width: var(--tab-width);
+    --tab-outline-width: 0;
+    --tab-radius-active: var(--radius-s);
+    --tab-radius: var(--radius-s);
+
+    --tag-border-width: var(--border-width);
+    --tag-size: var(--font-smallest);
+
+    --text-highlight-bg: rgba(var(--color-orange-rgb), 0.25);
+    --text-selection: var(--background-modifier-hover);
+
+    --titlebar-background-focused: transparent;
+    --titlebar-background: transparent;
+
+    --toggle-border-width: var(--border-width);
+    --toggle-s-border-width: var(--toggle-border-width);
+    --toggle-s-thumb-height: var(--toggle-thumb-height);
+    --toggle-s-thumb-width: var(--toggle-thumb-width);
+    --toggle-s-width: var(--toggle-width);
+    --toggle-thumb-height: 13px;
+    --toggle-thumb-width: 13px;
+    --toggle-width: 26px;
+
+    --view-header-height: 40px;
+
+    // Everything that comes from windows style below:
+
+    .mod-sidedock {
+        --divider-color: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    --dialog-width: 448px;
+
+    --toggle-thumb-height: 12px;
+    --toggle-thumb-width: 12px;
+    --toggle-width: 40px;
+    --toggle-border-width: 4px;
+    --slider-thumb-border-width: 4px;
+    --slider-track-background: var(--color-base-50);
+
+
+
+    &:not(.is-mobile) {
+        --icon-xl: 24px;
+    }
+
+    &.is-mobile {
+        --background-modifier-form-field: var(--interactive-normal) !important;
+        --border-width: 0.3px;
+
+        --divider-color: rgba(var(--mono-rgb-100), 0.1) !important;
+        --divider-width: 0.3px;
+
+        --canvas-dot-pattern: var(--color-base-20);
+
+        --icon-xs-stroke-width: 2px;
+        --icon-s-stroke-width: 1.5px;
+        --icon-m-stroke-width: 1.5px;
+        --icon-l-stroke-width: 1.5px;
+        --icon-xl-stroke-width: 1px;
+
+        --mobile-sidebar-width: 100%;
+        --mobile-toolbar-height: var(--input-height);
+        --nav-item-background-active: var(--color-accent);
+        --nav-item-background-selected: var(--color-accent);
+        --nav-item-color-active: var(--text-on-accent);
+        --nav-item-padding: 12px 16px;
+
+        .nav-files-container .tree-item-icon.collapse-icon {
+            right: 16px;
+        }
+
+        .suggestion-item {
+            padding: 8px 16px !important;
+        }
+
+        --shadow-s: rgba(0, 0, 0, 0.1) 0px 8px 30px;
+        --slider-thumb-height: 28px;
+        --slider-thumb-y: -12px;
+        --slider-thumb-width: 28px;
+        --slider-track-height: 4px;
+        --tab-switcher-background: var(--modal-background);
+        --tab-switcher-menubar-background: var(--tab-switcher-background);
+        --toggle-border-width: 2px;
+        --toggle-thumb-height: 27px;
+        --toggle-thumb-width: 27px;
+        --toggle-width: 51px;
+        --toolbar-option-width: calc(16px + var(--mobile-toolbar-height));
+        --view-header-height: 44px;
+
+        padding: 0;
+
+        &.theme-light {
+            --interactive-normal: var(--background-primary);
+        }
+
+        &.theme-dark {
+            --interactive-normal: var(--background-secondary-alt);
+        }
+    }
+
+    &.is-phone {
+        --file-header-justify: flex-start;
+        --mobile-sidebar-max-width: 90%;
+        --tab-outline-width: 1px;
+        --tab-outline-width: 1px;
+    }
+
+    &.is-tablet {
+        --dropdown-padding: 4px 32px 4px 16px;
+        --prompt-input-height: 56px;
+    }
+}

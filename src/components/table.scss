@@ -1,0 +1,90 @@
+:root table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+body {
+    --table-header-border-width: 0;
+    --table-row-last-border-width: 0;
+    --table-column-first-border-width: 0;
+    --table-column-last-border-width: 0;
+}
+
+body table,
+body .table-wrapper {
+    width: 100% !important;
+}
+
+
+.view-content .markdown-preview-view,
+.view-content .cm-sizer {
+    table {
+        position: relative;
+        border-radius: var(--radius-s);
+        overflow: hidden;
+    }
+
+    table::before {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        border: var(--table-border-width) solid var(--table-border-color);
+        border-radius: var(--radius-s);
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        pointer-events: none;
+        content: "";
+    }
+
+    .table-cell-wrapper:active,
+    .table-cell-wrapper:focus,
+    .table-cell-wrapper:focus-within {
+        background-color: var(--background-modifier-hover) !important;
+    }
+
+    thead,
+    tbody {
+        background-color: var(--background-secondary);
+    }
+
+    thead tr th {
+        border-top: none;
+    }
+
+    tr td,
+    tr th {
+        border-top: var(--table-border-width) solid var(--table-border-color);
+        border-right: none !important;
+        border-bottom: none !important;
+        border-left: var(--table-border-width) solid var(--table-border-color);
+    }
+
+    .cm-table-widget[dir="rtl"] tr th:first-child,
+    .cm-table-widget[dir="rtl"] tr td:first-child,
+    .el-table[dir="rtl"] tr th:first-child,
+    .el-table[dir="rtl"] tr td:first-child {
+        border-right-width: 0 !important;
+    }
+
+    .cm-table-widget[dir="rtl"] tr th:last-child,
+    .cm-table-widget[dir="rtl"] tr td:last-child,
+    .el-table[dir="rtl"] tr th:last-child,
+    .el-table[dir="rtl"] tr td:last-child {
+        border-left-width: 0 !important;
+    }
+
+    .markdown-embed,
+    .file-embed {
+        border-radius: var(--radius-m);
+        background-color: var(--background-secondary);
+        padding: 16px;
+    }
+}
+
+.cm-html-embed td,
+.markdown-rendered td,
+.cm-html-embed th,
+.markdown-rendered th,
+.markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
+    padding: 8px;
+}

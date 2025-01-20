@@ -1,0 +1,19 @@
+// Define how the ribbon looks
+
+body:not(.is-mobile) {
+    &.show-ribbon .mod-sidedock.mod-left-split {
+        margin-left: -8px;
+    }
+
+    .workspace .workspace-ribbon,
+    .workspace .workspace-ribbon.mod-left:before {
+        border: none; // remove border between ribbon & sidebar
+    }
+
+}
+
+body.is-tablet {
+    .side-dock-ribbon {
+        padding: 0;
+    }
+}

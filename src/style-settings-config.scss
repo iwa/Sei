@@ -1,0 +1,21 @@
+/* @settings
+
+name: Sei
+id: sei
+settings:
+    -
+        id: desktop-header
+        title: Desktop & Tablet
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: sei-accented-frame-opacity
+        title: Accented window frame
+        description: Higher value reduces overall interface contrast.
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 100
+        step: 5
+*/
