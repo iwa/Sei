@@ -1,0 +1,66 @@
+name: Release new Sei version
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Node.js 22
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Compile theme
+      run: npm run compile
+
+    - name: Get second-to-last tag
+      id: get_second_last_tag
+      run: |
+        # Get all tags sorted by creation order
+        TAGS=$(git tag --sort=-creatordate)
+        SECOND_LAST_TAG=$(echo "$TAGS" | sed -n 2p) # Get the second tag
+
+        if [ -z "$SECOND_LAST_TAG" ]; then
+          echo "No second-to-last tag found. Falling back to all commits."
+          SECOND_LAST_TAG="NONE"
+        fi
+
+        echo "second_last_tag=${SECOND_LAST_TAG}" >> $GITHUB_ENV
+
+    - name: Generate changelog
+      id: changelog
+      run: |
+        if [ "$second_last_tag" = "NONE" ]; then
+          echo "No tags found. Generating changelog for all commits."
+          git log --pretty=format:"- %h %s" > CHANGELOG.md
+        else
+          echo "Generating changelog from second-to-last tag: $second_last_tag"
+          git log $second_last_tag..HEAD --pretty=format:"- %h %s" > CHANGELOG.md
+        fi
+
+    - name: Create release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        tag="${GITHUB_REF#refs/tags/}"
+
+        echo "$changelog"
+
+        gh release create "$tag" \
+          --title="$tag" \
+          --notes-file CHANGELOG.md \
+          --draft \
+          manifest.json theme.css
