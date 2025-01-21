@@ -18,6 +18,11 @@ settings:
         min: 0
         max: 100
         step: 5
+    - 
+        id: remove-divider-heading
+        title: Remove divider below heading
+        description: Remove the divider below the headings
+        type: class-toggle
 */
 .theme-light {
   color-scheme: light;
@@ -1499,14 +1504,21 @@ body {
   font-size: var(--h1-size);
   color: var(--text-normal);
   margin-bottom: 24px;
-  border-bottom: var(--hr-thickness) solid var(--hr-color);
   padding-bottom: 16px;
+}
+
+body:not(.remove-divider-heading) .inline-title {
+  border-bottom: var(--hr-thickness) solid var(--hr-color);
 }
 
 h1,
 .HyperMD-header-1 {
-  border-bottom: var(--hr-thickness) solid var(--hr-color);
   padding-bottom: 16px !important;
+}
+
+body:not(.remove-divider-heading) h1,
+body:not(.remove-divider-heading) .HyperMD-header-1 {
+  border-bottom: var(--hr-thickness) solid var(--hr-color);
 }
 
 body {
