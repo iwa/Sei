@@ -57,12 +57,19 @@ body {
     font-size: var(--h1-size);
     color: var(--text-normal);
     margin-bottom: 24px;
-    border-bottom: var(--hr-thickness) solid var(--hr-color);
     padding-bottom: 16px;
-}
-
-h1,
-.HyperMD-header-1 {
+  }
+  
+  body:not(.remove-divider-heading) .inline-title {
     border-bottom: var(--hr-thickness) solid var(--hr-color);
+  }
+  
+  h1,
+  .HyperMD-header-1 {
     padding-bottom: 16px !important;
-}
+  }
+  
+  body:not(.remove-divider-heading) h1,
+  body:not(.remove-divider-heading) .HyperMD-header-1 {
+    border-bottom: var(--hr-thickness) solid var(--hr-color);
+  }
