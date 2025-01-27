@@ -1,51 +1,71 @@
 // Colorful tags
 // will color tags automatically by the title of it
 
+.theme-light {
+
+    .tag[href^="#Area"],
+    .tag[href^="#Area/life"],
+    .tag[href^="#Area/homelab"],
+    .tag[href^="#Area/linux"],
+    .tag[href^="#Type"],
+    .tag[href^="#Knowledge"],
+    .tag[href^="#Project"] {
+        text-shadow: 0 0 4px rgba(12, 12, 15, 0.2);
+    }
+}
+
+.theme-dark {
+
+    .tag[href^="#Area"],
+    .tag[href^="#Area/life"],
+    .tag[href^="#Area/homelab"],
+    .tag[href^="#Area/linux"],
+    .tag[href^="#Type"],
+    .tag[href^="#Knowledge"],
+    .tag[href^="#Project"] {
+        text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
+    }
+}
+
+
 .tag[href^="#Area"] {
     background-color: hsl(159, 38%, 63%);
     border-color: hsl(159, 38%, 68%);
     color: #fcfcff;
-    text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
 }
 
 .tag[href^="#Area/life"] {
     background-color: hsl(4, 57%, 85%);
     border-color: hsl(4, 57%, 90%);
     color: #fcfcff;
-    text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
 }
 
 .tag[href^="#Area/homelab"] {
     background-color: hsl(319, 31%, 72%);
     border-color: hsl(319, 31%, 77%);
     color: #fcfcff;
-    text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
 }
 
 .tag[href^="#Area/linux"] {
     background-color: hsl(271, 22%, 65%);
     border-color: hsl(271, 22%, 70%);
     color: #fcfcff;
-    text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
 }
 
 .tag[href^="#Type"] {
     background-color: hsl(42, 47%, 80%);
     border-color: hsl(42, 47%, 85%);
     color: #fcfcff;
-    text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
 }
 
 .tag[href^="#Knowledge"] {
     background-color: hsl(261, 42%, 73%);
     border-color: hsl(261, 42%, 78%);
     color: #fcfcff;
-    text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
 }
 
 .tag[href^="#Project"] {
     background-color: hsl(220, 40%, 71%);
     border-color: hsl(220, 40%, 76%);
     color: #fcfcff;
-    text-shadow: 0 0 4px rgba(12, 12, 15, 0.8);
 }
