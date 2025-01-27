@@ -57,13 +57,18 @@ body {
     font-size: var(--h1-size);
     color: var(--text-normal);
     margin-bottom: 24px;
-    border-bottom: var(--hr-thickness) solid var(--hr-color);
     padding-bottom: 16px;
 }
 
 h1,
 .HyperMD-header-1 {
     padding-bottom: 16px !important;
+}
+
+// Style Settings: optionally remove divider line on h1 & inline
+
+body:not(.sei-remove-divider-inline-title) .inline-title {
+    border-bottom: var(--hr-thickness) solid var(--hr-color);
 }
 
 body:not(.sei-remove-divider-h1) h1,
