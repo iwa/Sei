@@ -44,6 +44,11 @@ body:not(.is-mobile) {
             transition-delay: 5s;
         }
     }
+
+    // Hide border between editors
+    .workspace-leaf-resize-handle {
+        border-inline-end-color: transparent;
+    }
 }
 
 .titlebar {
