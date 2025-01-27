@@ -122,6 +122,7 @@ body.is-mobile {
         background-color: var(--background-secondary);
     }
 
+    // "Tab selector" drawer in sidebars
     .workspace-drawer {
         border-radius: 0;
 
@@ -190,6 +191,7 @@ body.is-mobile {
         }
     }
 
+    // Nav file explorer
     .nav-files-container {
         padding: 8px 16px !important;
 
@@ -206,39 +208,8 @@ body.is-mobile {
             border-radius: 0;
         }
 
-        // bottom bar between elements in nav
-        // .tree-item:not(:last-child)::before {
-        //     position: absolute;
-        //     right: 0;
-        //     bottom: 0;
-        //     border-bottom: var(--border-width) solid var(--background-modifier-border);
-        //     width: 100%;
-        //     content: "";
-        // }
-
         .tree-item-self {
-            border-radius: 0;
-            padding-inline-end: var(--nav-item-parent-padding);
-        }
-
-        .tree-item-children {
-            position: relative;
-            margin-bottom: 0;
-            border-inline-start: none;
-        }
-
-        .tree-item-children::before {
-            position: absolute;
-            top: 0;
-            right: 0;
-            border-top: var(--border-width) solid var(--background-modifier-border);
-            width: calc(100% + var(--nav-item-children-margin-start));
-            content: "";
-        }
-
-        .tree-item-icon.collapse-icon {
-            right: var(--nav-item-parent-padding);
-            margin-inline-start: unset;
+            border-radius: var(--radius-s);
         }
     }
 

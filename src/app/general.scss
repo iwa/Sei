@@ -122,11 +122,7 @@ body {
         --nav-item-background-active: var(--color-accent);
         --nav-item-background-selected: var(--color-accent);
         --nav-item-color-active: var(--text-on-accent);
-        --nav-item-padding: 12px 16px;
-
-        .nav-files-container .tree-item-icon.collapse-icon {
-            right: 16px;
-        }
+        --nav-item-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-6);
 
         .suggestion-item {
             padding: 8px 16px !important;
