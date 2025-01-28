@@ -17,7 +17,7 @@ Some elements have been kept pratically unchanged because the spirit Cupertino's
 
 ## 🛠️ Installation
 
-Currently WIP, I might try to get the theme on the Obsidian store for convinience.
+You can install the theme through the **Community Themes tab in Obsidian!**
 
 ## 🙏 Credits
 
