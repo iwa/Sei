@@ -125,7 +125,7 @@ body:not(.is-mobile) {
         padding: 4px 12px;
     }
 
-    // Consistent margins around editors
+    // Consistent margins around editors, only when there are multiple editors open
     .workspace .mod-root .workspace-tabs:not(:only-of-type) .workspace-tab-container {
         margin: 0 4px 8px !important;
     }
