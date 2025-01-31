@@ -30,6 +30,8 @@ Below is the list of themes I took inspiration from and adapted some of their fe
   - Adapted their custom checkboxes
 - [Minimal](https://github.com/kepano/obsidian-minimal)
   - Adapted the Inline labels navigation feature
+- [Border](https://github.com/Akifyss/obsidian-border)
+  - Adapted icons in settings
 
 ## 📜 License
 
