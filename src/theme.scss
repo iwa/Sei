@@ -51,11 +51,11 @@
 
 
 // Plugins
-@use "plugins/canvas.scss";
-@use "plugins/graph.scss";
-@use "plugins/backlinks.scss";
-@use "plugins/outline.scss";
-@use "plugins/core-webviewer.scss";
+@use "plugins/core/core-canvas.scss";
+@use "plugins/core/core-graph.scss";
+@use "plugins/core/core-backlinks.scss";
+@use "plugins/core/core-outline.scss";
+@use "plugins/core/core-webviewer.scss";
 
 @use "plugins/style-settings.scss";
 @use "plugins/linter.scss";
