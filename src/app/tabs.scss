@@ -36,6 +36,7 @@ body:not(.is-phone) {
             border: none;
             background-color: var(--background-modifier-hover);
             padding: 0;
+            transition: min-width 200ms ease-out;
 
             &::before,
             &::after {
