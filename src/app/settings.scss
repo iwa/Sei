@@ -209,8 +209,13 @@ body.is-phone {
         }
     }
 
-    .setting-item {
+    .mod-toggle {
         border: none;
+    }
+
+    // add margin below group of toggles
+    .setting-item.mod-toggle + .setting-item:not(.mod-toggle) {
+        margin-top: 1em;
     }
 
     .setting-item:not(.mod-toggle) .setting-item-info {
@@ -233,12 +238,6 @@ body.is-phone {
     .setting-item.mod-toggle+.setting-item.mod-toggle {
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-    }
-
-    .setting-item-control .clickable-icon {
-        background-color: var(--interactive-normal);
-        min-width: var(--input-height);
-        height: var(--input-height);
     }
 
     .setting-item-control:not(:has(:not(button))) {

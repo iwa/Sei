@@ -165,21 +165,18 @@ body.is-phone {
     select,
     .dropdown {
         justify-content: flex-start;
-        background-color: var(--interactive-normal);
         padding: 0 16px;
         min-height: var(--input-height);
         font-weight: normal;
         text-align-last: unset;
     }
 
-    button:not(.clickable-icon):not(.modal:not(.mod-settings):not(.mod-community-modal) button):not(.view-content button),
-    select,
-    .dropdown {
+    .setting-item-control button {
         color: var(--text-accent);
     }
 
-    .setting-item-control button {
-        color: var(--text-accent);
+    .mod-cta {
+        color: #FAFAFA !important;
     }
 }
 
