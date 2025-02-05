@@ -125,24 +125,23 @@ body:not(.is-mobile) {
         padding: 4px 12px;
     }
 
-    // Consistent margins around editors, only when there are multiple editors open
-    .workspace .mod-root .workspace-tabs:not(:only-of-type) .workspace-tab-container {
-        margin: 0 4px 8px !important;
-    }
-
-    .mod-root .workspace-tab-container {
+    // Add margins in-between editors
+    .workspace .mod-root .workspace-tab-container {
         margin-bottom: 8px;
         border-radius: var(--radius-m);
     }
 
-    &:not(.show-ribbon) .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tab-container {
-        margin-left: 8px;
-        border-radius: var(--radius-m);
+    .workspace .workspace-split.mod-vertical {
+        gap: 8px;
     }
 
-    .workspace:not(.is-right-sidedock-open) .mod-root .workspace-tab-container {
+    // Add left & right margins when in 'Zen mode'
+    &:not(.show-ribbon) .workspace:not(.is-left-sidedock-open) .mod-root {
+        margin-left: 8px;
+    }
+
+    .workspace:not(.is-right-sidedock-open) .mod-root {
         margin-right: 8px;
-        border-radius: var(--radius-m);
     }
 }
 
