@@ -144,30 +144,6 @@ body:not(.is-mobile) {
         margin-right: 8px;
         border-radius: var(--radius-m);
     }
-
-    /* Auto Focus Mode */
-    .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) {
-        background-color: var(--background-primary);
-
-        .workspace-tab-container {
-            margin: 0 !important;
-            box-shadow: none !important;
-            border: 0px solid transparent !important;
-            border-radius: 0;
-        }
-
-        .workspace-ribbon:not(:hover),
-        .workspace-tab-header-container:not(:hover),
-        .view-header:not(:hover) {
-            opacity: 0.5;
-            transition: var(--anim-duration-fast);
-        }
-
-        .view-header,
-        .view-content {
-            background-color: transparent;
-        }
-    }
 }
 
 body.is-mobile {
