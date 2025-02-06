@@ -39,7 +39,7 @@ body:not(.is-mobile) {
     .workspace-split.mod-sidedock .workspace-leaf-content>.node-insert-event,
     .workspace-split.mod-sidedock .workspace-leaf-content>.view-content,
     .workspace-split.mod-sidedock .workspace-leaf-content>.nav-header {
-        padding: 4px 16px;
+        padding: var(--size-4-1) var(--size-4-2);
     }
 
     .view-content>.node-insert-event {
