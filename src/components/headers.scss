@@ -75,3 +75,108 @@ body:not(.sei-remove-divider-h1) h1,
 body:not(.sei-remove-divider-h1) .HyperMD-header-1 {
     border-bottom: var(--hr-thickness) solid var(--hr-color);
 }
+
+// Feature: Headers indicators
+body:not(.sei-disable-header-indicators) {
+
+    .markdown-reading-view,
+    .markdown-source-view {
+
+        // Replace Arrow collapse indicators by Headers indicators
+        h1>.heading-collapse-indicator,
+        h2>.heading-collapse-indicator,
+        h3>.heading-collapse-indicator,
+        h4>.heading-collapse-indicator,
+        h5>.heading-collapse-indicator,
+        h6>.heading-collapse-indicator,
+        .HyperMD-header-1>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-2>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-3>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-4>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-5>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-6>.cm-fold-indicator>.collapse-indicator {
+            opacity: 1 !important;
+
+            >svg {
+                display: none;
+            }
+
+            &::after {
+                font-weight: 600;
+                color: var(--text-faint);
+                text-align: right;
+                line-height: 1;
+                margin-inline-start: -12px;
+                transition: color var(--anim-duration-fast);
+            }
+
+            &.is-collapsed::after {
+                color: var(--collapse-icon-color-collapsed);
+            }
+        }
+
+        // h1
+        h1>.heading-collapse-indicator,
+        .HyperMD-header-1>.cm-fold-indicator>.collapse-indicator {
+            &::after {
+                content: "H1";
+                font-size: 16px;
+            }
+        }
+
+        // h2
+        h2>.heading-collapse-indicator,
+        .HyperMD-header-2>.cm-fold-indicator>.collapse-indicator {
+            &::after {
+                content: "H2";
+                font-size: 14px;
+            }
+        }
+
+        // h3
+        h3>.heading-collapse-indicator,
+        .HyperMD-header-3>.cm-fold-indicator>.collapse-indicator {
+            &::after {
+                content: "H3";
+                font-size: 14px;
+            }
+        }
+
+        // h4
+        h4>.heading-collapse-indicator,
+        .HyperMD-header-4>.cm-fold-indicator>.collapse-indicator {
+            &::after {
+                content: "H4";
+                font-size: 12px;
+            }
+        }
+
+        // h5
+        h5>.heading-collapse-indicator,
+        .HyperMD-header-5>.cm-fold-indicator>.collapse-indicator {
+            &::after {
+                content: "H5";
+                font-size: 12px;
+            }
+        }
+
+        // h6
+        h6>.heading-collapse-indicator,
+        .HyperMD-header-6>.cm-fold-indicator>.collapse-indicator {
+            &::after {
+                content: "H6";
+                font-size: 12px;
+            }
+        }
+
+        // More spacing when editing
+        .HyperMD-header-1>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-2>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-3>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-4>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-5>.cm-fold-indicator>.collapse-indicator,
+        .HyperMD-header-6>.cm-fold-indicator>.collapse-indicator {
+            width: 1em;
+        }
+    }
+}

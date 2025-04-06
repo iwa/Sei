@@ -33,6 +33,11 @@ settings:
         title: Remove divider line below H1
         type: class-toggle
     -
+        id: sei-disable-header-indicators
+        title: Disable Header indicators in the gutter
+        description: Replace the Header indicators with the vanilla arrows
+        type: class-toggle
+    -
         id: sei-header-tabs
         title: Tabs
         type: heading
