@@ -9,6 +9,6 @@
     "watch": "sass ./src/theme.scss theme.css --no-source-map --no-charset --watch"
   },
   "dependencies": {
-    "sass": "^1.83.4"
+    "sass": "^1.86.3"
   }
 }
