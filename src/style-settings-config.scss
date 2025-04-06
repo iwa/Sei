@@ -32,4 +32,15 @@ settings:
         id: sei-remove-divider-h1
         title: Remove divider line below H1
         type: class-toggle
+    -
+        id: sei-header-tabs
+        title: Tabs
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: sei-disable-centered-tabs
+        title: Disable centered tabs
+        description: Align tabs back to the left
+        type: class-toggle
 */
