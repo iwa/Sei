@@ -6,3 +6,8 @@
     margin: 0 !important;
     border: none !important;
 }
+
+body {
+    --italic-color: var(--sei-colors-italic);
+    --bold-color: var(--sei-colors-bold);
+}

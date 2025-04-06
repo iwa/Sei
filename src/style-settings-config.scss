@@ -48,4 +48,27 @@ settings:
         title: Disable centered tabs
         description: Align tabs back to the left
         type: class-toggle
+    -
+        id: sei-header-colors
+        title: Colors
+        description: Top color picker for light theme, bottom color picker for dark theme
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: sei-colors-bold
+        title: Bold text color
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#007AFF'
+        default-dark: '#E3DFA1'
+    -
+        id: sei-colors-italic
+        title: Italic text color
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#898f9d'
+        default-dark: '#898f9d'
 */
