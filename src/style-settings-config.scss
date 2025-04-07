@@ -4,23 +4,14 @@ name: Sei
 id: sei
 settings:
     -
-        id: sei-header-desktop-tablet
-        title: Desktop & Tablet
-        type: heading
-        level: 1
-        collapsed: false
-    -
-        id: sei-accented-frame-opacity
-        title: Accented window frame
-        description: Higher value reduces overall interface contrast.
-        type: variable-number-slider
-        default: 0
-        min: 0
-        max: 100
-        step: 5
+        id: sei-text-global-description
+        title: ℹ️ Information
+        description: "The settings provided here are designed to disable or tweak some features of the theme.\nThis theme does **NOT** aim to be overly-customizable."
+        type: info-text
+        markdown: true
     -
         id: sei-header-headings
-        title: Headings
+        title: 📯 Headings
         type: heading
         level: 2
         collapsed: false
@@ -39,7 +30,7 @@ settings:
         type: class-toggle
     -
         id: sei-header-tabs
-        title: Tabs
+        title: 📑 Tabs
         type: heading
         level: 2
         collapsed: false
@@ -50,11 +41,20 @@ settings:
         type: class-toggle
     -
         id: sei-header-colors
-        title: Colors
+        title: 🎨 Colors
         description: Top color picker for light theme, bottom color picker for dark theme
         type: heading
         level: 2
         collapsed: false
+    -
+        id: sei-accented-frame-opacity
+        title: Accented window frame
+        description: Higher value reduces overall interface contrast.
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 100
+        step: 5
     -
         id: sei-colors-bold
         title: Bold text color
@@ -73,7 +73,7 @@ settings:
         default-dark: '#898f9d'
     -
         id: sei-header-hide
-        title: Hide elements
+        title: 👻 Hide elements
         type: heading
         level: 2
         collapsed: false
