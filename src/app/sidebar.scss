@@ -56,11 +56,10 @@ body:not(.is-mobile) {
 
     // Panel actions style
     .nav-buttons-container {
-        transition: var(--anim-duration-moderate);
+        transition: var(--anim-duration-fast);
         opacity: 0.5;
         border-radius: calc(var(--clickable-icon-radius) + 2px);
         border: 1px solid var(--background-modifier-hover);
-        padding: 2px; // match with gap 2px
     }
 
     .nav-buttons-container:hover,
@@ -80,9 +79,9 @@ body:not(.is-mobile) {
 
     .nav-action-button.is-active,
     .nav-action-button.is-active:hover {
-        background-color: var(--background-primary);
+        background-color: var(--background-modifier-hover);
         color: var(--icon-color);
-        box-shadow: 0 0 0 1px var(--background-modifier-hover) inset;
+        //box-shadow: 0 0 0 1px var(--background-modifier-hover) inset;
 
         &::after {
             position: absolute;
