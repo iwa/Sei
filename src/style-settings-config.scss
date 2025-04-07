@@ -71,4 +71,14 @@ settings:
         format: hex
         default-light: '#898f9d'
         default-dark: '#898f9d'
+    -
+        id: sei-header-hide
+        title: Hide elements
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: sei-hide-backlinks-status-bar
+        title: Hide Backlinks from status bar
+        type: class-toggle
 */

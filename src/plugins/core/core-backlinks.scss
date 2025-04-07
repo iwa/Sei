@@ -22,3 +22,9 @@ body.is-mobile .embedded-backlinks {
         width: calc(100% - 188px);
     }
 }
+
+body.sei-hide-backlinks-status-bar {
+    .status-bar-item.plugin-backlink {
+        display: none !important;
+    }
+}
