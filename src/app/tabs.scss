@@ -162,9 +162,10 @@ body:not(.sei-disable-centered-tabs) {
     }
 
     &.mod-macos.is-hidden-frameless {
-        &:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-            padding-left: var(--frame-left-space);
-        }
+        // todo: enable only when disabling inline labeled nav
+        // &:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+        //     padding-left: var(--frame-left-space);
+        // }
 
         &.is-fullscreen {
             --frame-left-space: 0;
