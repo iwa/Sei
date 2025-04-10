@@ -90,8 +90,7 @@ body:not(.is-mobile) {
     }
 
     button {
-        position: relative;
-        padding: 4px 10px;
+        padding: var(--size-4-1) 10px;
     }
 
     button.mod-cta {
