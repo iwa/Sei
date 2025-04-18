@@ -1,6 +1,6 @@
 body:not(.is-mobile) {
     .modal-container {
-        animation: fadeIn 0.075s ease;
+        animation: fade-in 0.075s ease;
     }
 
     .modal button {
@@ -8,7 +8,7 @@ body:not(.is-mobile) {
     }
 
     .modal:not(.mod-settings):not(.mod-community-modal) {
-        animation: var(--anim-duration-fast) fadeInDown;
+        animation: var(--anim-duration-fast) fade-in-down;
         padding: 1em;
 
         .modal-close-button {
@@ -66,15 +66,16 @@ body:not(.is-mobile) {
 body.is-mobile {
     .mod-confirmation .modal:not(.mod-lg) {
         --interactive-normal: unset;
-        background-color: var(--modal-background);
-    }
 
-    .modal .modal-header {
-        border: none !important;
+        background-color: var(--modal-background);
     }
 
     .modal {
         box-shadow: none !important;
+
+        .modal-header {
+            border: none !important;
+        }
 
         .modal-nav-action {
             margin-top: unset;

@@ -4,7 +4,7 @@ body:not(.is-phone) {
     }
 
     .prompt {
-        animation: fadeInDown var(--anim-duration-fast) ease !important;
+        animation: fade-in-down var(--anim-duration-fast) ease !important;
         outline: var(--prompt-border-width) solid var(--prompt-border-color);
         border: none;
         background-color: var(--modal-background);
@@ -43,7 +43,7 @@ body:not(.is-phone) {
 body.is-phone {
     .prompt {
         --prompt-top: calc(var(--safe-area-inset-top) + 8px);
-        animation: fadeInDown var(--anim-duration-fast) ease !important;
+        animation: fade-in-down var(--anim-duration-fast) ease !important;
         transition: var(--anim-duration-fast);
         margin-top: var(--prompt-top);
         box-shadow: var(--shadow-l);
@@ -72,7 +72,7 @@ body.is-tablet {
     .prompt {
         --prompt-bottom: 0;
 
-        animation: var(--anim-duration-slow) fadeIn;
+        animation: var(--anim-duration-slow) fade-in;
         outline: var(--prompt-border-width) solid var(--background-modifier-hover);
         background-color: var(--modal-background) !important;
     }
