@@ -9,10 +9,8 @@
     "watch": "sass ./src/theme.scss theme.css --no-source-map --no-charset --watch",
     "lint": "stylelint ."
   },
-  "dependencies": {
-    "sass": "^1.86.3"
-  },
   "devDependencies": {
+    "sass": "^1.86.3",
     "stylelint": "^16.18.0",
     "stylelint-config-standard-scss": "^14.0.0"
   }
