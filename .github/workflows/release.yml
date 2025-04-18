@@ -15,16 +15,19 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Set up Node.js 22
+    - name: Setup Node.js 22
       uses: actions/setup-node@v3
       with:
         node-version: '22'
 
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+
     - name: Install dependencies
-      run: npm install
+      run: bun install
 
     - name: Compile theme
-      run: npm run compile
+      run: bun run compile
 
     - name: Get second-to-last tag
       id: get_second_last_tag
