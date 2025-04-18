@@ -1,11 +1,5 @@
 // Every style related to the window style
 
-body {
-    &:not(.is-phone) {
-        --header-height: 44px; // Apply on PC & Tablet
-    }
-}
-
 body,
 body .app-container,
 body.is-mobile .app-container,
@@ -13,6 +7,12 @@ body.is-phone .app-container,
 body.is-tablet .app-container {
     align-items: center;
     overflow: hidden;
+}
+
+body {
+    &:not(.is-phone) {
+        --header-height: 44px; // Apply on PC & Tablet
+    }
 }
 
 body:not(.is-mobile) {
