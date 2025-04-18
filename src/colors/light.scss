@@ -1,7 +1,7 @@
 .theme-light {
     color-scheme: light;
 
-    --background-modifier-cover: rgba(170, 170, 170, 0.6);
+    --background-modifier-cover: rgb(170 170 170 / 60%);
     --background-modifier-border-hover: var(--color-base-25);
 
     --color-red-rgb: 255, 59, 48;
@@ -21,16 +21,15 @@
     --color-pink-rgb: 255, 45, 85;
     --color-pink: #ff2d55;
 
-    --divider-color: rgba(0, 0, 0, 0.05) !important;
+    --divider-color: rgb(0 0 0 / 5%) !important;
 
-    --modal-border-color: rgba(0, 0, 0, 0.1);
-    --modal-background: rgb(from var(--background-secondary) r g b / 75%) !important;
+    --modal-border-color: rgb(0 0 0 / 10%);
+    --modal-background: var(--background-secondary) !important;
 
     --hr-color: var(--background-modifier-hover);
 
-    --input-shadow: 0px 0px 0px 1px var(--background-modifier-border), 0 -0.5px 0 0 rgba(0, 0, 0, 0.25) inset !important;
+    --input-shadow: 0px 0px 0px 1px var(--background-modifier-border), 0 -0.5px 0 0 rgb(0 0 0 / 25%) inset !important;
+
     --interactive-normal: var(--background-primary);
-    --modal-background: var(--background-secondary) !important;
-    --modal-border-color: rgba(0, 0, 0, 0.1);
     --slider-thumb-border-color: var(--color-base-00);
 }
