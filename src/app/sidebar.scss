@@ -81,6 +81,7 @@ body:not(.is-mobile) {
     .nav-action-button.is-active:hover {
         background-color: var(--background-modifier-hover);
         color: var(--icon-color);
+
         //box-shadow: 0 0 0 1px var(--background-modifier-hover) inset;
 
         &::after {
@@ -166,7 +167,7 @@ body.is-mobile {
             overflow: auto;
         }
 
-        .view-content>div:not(.nav-header):not(:empty) {
+        .view-content>div:not(.nav-header, :empty) {
             border-radius: var(--input-radius);
             background-color: var(--interactive-normal);
 
