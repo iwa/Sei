@@ -38,7 +38,7 @@ body:not(.is-mobile) {
     }
 
     &.theme-dark .modal.mod-settings .setting-item:not(.setting-item-heading) {
-        border: none;
+        border: var(--border-width) solid rgba(0, 0, 0, 0.05);
         background-color: rgba(255, 255, 255, 0.05);
     }
 
