@@ -6,7 +6,7 @@ body:not(.is-mobile) {
     }
 
     .workspace .workspace-ribbon,
-    .workspace .workspace-ribbon.mod-left:before {
+    .workspace .workspace-ribbon.mod-left::before {
         border: none; // remove border between ribbon & sidebar
     }
 
