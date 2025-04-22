@@ -20,12 +20,12 @@ body {
 
     &.mod-macos,
     &.mod-macos.is-hidden-frameless:not(.is-fullscreen) {
-        .mod-left-split .mod-top .workspace-tab-header-container:before {
+        .mod-left-split .mod-top .workspace-tab-header-container::before {
             -webkit-app-region: drag;
             position: absolute;
             width: calc(100% - var(--divider-width));
             height: calc(var(--header-height) - var(--tab-outline-width));
-            border-bottom: 0px solid var(--tab-outline-color);
+            border-bottom: 0 solid var(--tab-outline-color);
         }
     }
 
@@ -39,7 +39,7 @@ body {
     &:not(.is-hidden-frameless),
     &.mod-macos:not(.hider-ribbon),
     &.colorful-frame.is-hidden-frameless:not(.is-fullscreen) {
-        .mod-left-split .mod-top .workspace-tab-header-container:before {
+        .mod-left-split .mod-top .workspace-tab-header-container::before {
             border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
         }
 
@@ -50,7 +50,7 @@ body {
 
     &:not(.is-hidden-frameless) {
         .mod-left-split .mod-top .workspace-tab-header-container {
-            &:before {
+            &::before {
                 position: absolute;
                 top: 0;
                 content: " ";
@@ -58,7 +58,7 @@ body {
         }
     }
 
-    &.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) {
+    &.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen, .is-popout-window) {
         .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
             padding-left: 0;
         }
@@ -84,6 +84,8 @@ body {
             flex-direction: column-reverse !important;
             height: auto;
             width: 100%;
+            border: none;
+            padding: 0;
 
             .sidebar-toggle-button.mod-left {
                 position: absolute;
@@ -161,11 +163,6 @@ body {
         .workspace-tab-header:hover .workspace-tab-header-inner-icon,
         .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
             color: var(--icon-color-active);
-        }
-
-        .workspace-tab-header-container {
-            border: none;
-            padding: 0;
         }
     }
 
