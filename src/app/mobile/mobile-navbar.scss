@@ -71,7 +71,7 @@ body.is-mobile {
         }
 
         // left padding is adjusted to compensate the hardcoded negative margin-inline-start
-        .nav-files-container > div {
+        .nav-files-container>div {
             padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-4);
         }
 
