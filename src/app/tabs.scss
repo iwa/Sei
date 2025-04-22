@@ -1,26 +1,38 @@
-/* stylelint-disable no-descending-specificity */
-
 // Define how tabs looks
 
+// Desktop & Tablet
 body:not(.is-phone) {
     .workspace {
         .workspace-tab-header-container-inner {
             position: relative;
             border-radius: var(--tab-radius);
             padding: 0;
+            margin-right: var(--size-2-2);
         }
 
+        // + & sidear toggle buttons
+        .workspace-tab-header-new-tab .clickable-icon,
+        .sidebar-toggle-button .clickable-icon {
+            padding: 7px; // var(--size-4-2) - 1px to match tabs height
+        }
+
+        // Tab list button
+        .workspace-tab-header-tab-list .clickable-icon {
+            padding: 7px var(--size-2-1);
+        }
+
+        // Remove padding and vertically center the sidebar toggle icon inside the div like + & tab icons
+        // Fixes hover area to match the actual icon  like + & tab icons
         .sidebar-toggle-button {
+            padding: 1px 0 0;
             align-items: center;
-            padding: 0;
-            height: var(--header-height);
         }
 
         .mod-root {
 
             .workspace-tab-header-container-inner {
                 flex-grow: 1;
-                gap: 4px;
+                gap: var(--size-2-2);
             }
 
             .workspace-tab-header-spacer {
@@ -32,7 +44,8 @@ body:not(.is-phone) {
                 border: none;
                 background-color: var(--background-modifier-hover);
                 padding: 0;
-                transition: min-width 200ms ease-out;
+                transition: 160ms ease-out, opacity 120ms ease-in-out;
+                flex-grow: 1;
 
                 &::before,
                 &::after {
@@ -41,9 +54,11 @@ body:not(.is-phone) {
             }
 
             .workspace-tab-header.is-active {
+                --tab-max-width: 220px;
+
                 opacity: 1;
                 box-shadow: none;
-                min-width: 200px;
+                flex-grow: 1.25;
             }
 
             .workspace-tab-header-inner {
@@ -63,11 +78,6 @@ body:not(.is-phone) {
             .workspace-tab-header-tab-list {
                 margin: 0;
                 padding: unset;
-            }
-
-            .workspace-tab-header-tab-list .clickable-icon {
-                padding: 0;
-                width: 16px;
             }
 
             .workspace-tabs.mod-active {
@@ -97,31 +107,14 @@ body:not(.is-phone) {
     }
 }
 
+// Desktop
 body:not(.is-mobile) {
-    .workspace-tab-header-container .clickable-icon {
-        padding: 4px;
-        width: 32px;
-        height: 32px;
-    }
-
     .workspace-tab-header-container-inner {
         margin: 6px 0;
     }
-
-    .sidebar-toggle-button {
-        align-items: center;
-        padding: 0;
-        height: var(--header-height);
-    }
-
-    .sidebar-toggle-button .clickable-icon,
-    .workspace-ribbon .clickable-icon {
-        padding: 4px;
-        width: 40px;
-        height: 32px;
-    }
 }
 
+// Windows & Linux
 body.mod-windows.is-hidden-frameless,
 body.mod-linux.is-hidden-frameless {
     &.show-ribbon {
@@ -136,6 +129,7 @@ body.mod-linux.is-hidden-frameless {
     }
 }
 
+// Tablet
 body.is-tablet {
     .workspace-tab-header-container {
         padding: 0 16px !important;
@@ -147,222 +141,11 @@ body.is-tablet {
     }
 }
 
-// Feature: Centered tabs
-// todo (would need a rewrite)
-body:not(.sei-disable-centered-tabs) {
-    &:not(.is-phone) {
-        .workspace {
-            .workspace-tab-header-container-inner {
-                justify-content: center;
-            }
-        }
-    }
-
-    &.mod-macos.is-hidden-frameless {
-        // todo: enable only when disabling inline labeled nav
-        // &:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-        //     padding-left: var(--frame-left-space);
-        // }
-
-        &.is-fullscreen {
-            --frame-left-space: 0;
-
-            &.show-ribbon .mod-sidedock.mod-left-split .workspace-tab-header-container,
-            &.show-ribbon .mod-root .sidebar-toggle-button.mod-left {
-                z-index: var(--layer-popover);
-                margin-left: calc(-1 * var(--ribbon-width));
-            }
-        }
-
-        &.show-ribbon {
-            .workspace .mod-sidedock.mod-left-split .mod-top-left-space .sidebar-toggle-button.mod-left {
-                left: calc(var(--frame-left-space) + 8px);
-            }
-
-            .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
-                margin-left: 48px;
-            }
-
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-right: 0;
-                padding-left: 32px;
-            }
-
-            .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-left: 80px;
-            }
-
-            .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-right: 8px;
-            }
-
-            &.hider-sidebar-buttons {
-                .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
-                    margin-left: 8px;
-                }
-
-                .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-                .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                    padding-right: 0;
-                    padding-left: 32px;
-                }
-
-                .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-                .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                    padding-left: 40px;
-                }
-
-                .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-                .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                    padding-right: 0;
-                    padding-left: 32px;
-                }
-            }
-        }
-
-        &.hider-sidebar-buttons {
-            --frame-left-space: calc(80px - var(--ribbon-width));
-
-            .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
-                margin-left: 0;
-            }
-
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-right: 24px;
-            }
-
-            .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-left: 40px;
-            }
-
-            .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-right: 16px;
-            }
-        }
-
-        .workspace-tab-header-container {
-            padding-right: 8px !important;
-        }
-
-        .sidebar-toggle-button.mod-right {
-            position: relative !important;
-            padding: 0 !important;
-        }
-
-        .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-right: 24px;
-        }
-
-        .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 80px;
-        }
-
-        .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-right: 56px;
-        }
-
-        .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 48px;
-        }
-    }
-
-    &.mod-windows.is-hidden-frameless,
-    &.mod-linux.is-hidden-frameless {
-        &.show-ribbon {
-
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-left: calc(88px + var(--frame-right-space));
-            }
-
-            .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-left: 88px;
-            }
-
-            &.hider-sidebar-buttons {
-
-                .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-                .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                    padding-left: 48px;
-                }
-            }
-        }
-
-        &.hider-sidebar-buttons {
-
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-left: calc(48px + var(--frame-right-space));
-            }
-
-            .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-left: calc(40px + var(--frame-right-space));
-            }
-
-            .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-            .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-                padding-left: 48px;
-            }
-        }
-
-        .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: calc(48px + var(--frame-right-space));
-        }
-
-        .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: calc(80px + var(--frame-right-space));
-        }
-
-        .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 56px;
-        }
-
-        .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 88px;
-        }
-    }
-
-    &:not(.is-mobile, .is-hidden-frameless) {
-
-        &.show-ribbon .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        &.show-ribbon .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 88px;
-        }
-
-        .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace:not(.is-left-sidedock-open, .is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 48px;
-        }
-
-        .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace.is-left-sidedock-open:not(.is-right-sidedock-open) .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 80px;
-        }
-
-        .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace:not(.is-left-sidedock-open).is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 48px;
-        }
-
-        .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-tabs .workspace-tab-header-container-inner,
-        .workspace.is-left-sidedock-open.is-right-sidedock-open .mod-root>.workspace-split:first-of-type .workspace-tab-header-container-inner {
-            padding-left: 48px;
+// Feature: Centered tabs (Desktop & Tablet)
+body:not(.sei-disable-centered-tabs, .is-phone) {
+    .workspace {
+        .workspace-tab-header-container-inner {
+            justify-content: center;
         }
     }
 }
