@@ -1,15 +1,41 @@
+/* stylelint-disable selector-class-pattern */
+
 body {
     --code-white-space: pre-wrap;
     --code-size: var(--font-smaller);
     --code-background: var(--background-primary-alt);
+
+    .markdown-rendered pre,
+    .HyperMD-codeblock {
+        box-shadow: rgb(0 0 0 / 8%) 0 2px 6px;
+        background-color: hsla(var(--color-accent-hsl), calc(var(--sei-accented-frame-opacity) * 0.0025));
+    }
+}
+
+.theme-dark {
+    --code-normal: #ABB2BF;
+    --code-comment: #5C6370;
+    --code-function: #E5C07B;
+    --code-important: #D19A66;
+    --code-keyword: #E06C75;
+    --code-operator: #BE5046;
+    --code-property: #56B6C2;
+    --code-punctuation: #ABB2BF;
+    --code-string: #98C379;
+    --code-tag: #61AFEF;
+    --code-value: #C678DD;
+}
+
+.theme-light {
     --code-normal: var(--text-muted);
     --code-comment: var(--text-faint);
-    --code-function: var(--color-orange);
+    --code-function: var(--color-yellow);
     --code-important: var(--color-orange);
     --code-keyword: var(--color-red);
-    --code-property: var(--color-blue);
+    --code-operator: #BE5046;
+    --code-property: var(--color-cyan);
     --code-punctuation: var(--text-muted);
-    --code-string: var(--color-cyan);
-    --code-tag: var(--color-red);
+    --code-string: var(--color-green);
+    --code-tag: var(--color-blue);
     --code-value: var(--color-purple);
 }
