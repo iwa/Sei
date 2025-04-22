@@ -1,7 +1,7 @@
 body.is-mobile {
     .mobile-image-viewer {
         animation: var(--anim-duration-fast) fade-in-scale;
-        background-color: var(--background-secondary);
+        background-color: rgb(from var(--background-secondary) r g b / 80%);
     }
 
     .mobile-image-viewer img {
