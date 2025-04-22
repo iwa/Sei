@@ -1,10 +1,10 @@
 body.is-mobile {
     &.theme-light .mobile-toolbar {
-        background-color: rgb(209, 211, 218);
+        background-color: rgb(209 211 218);
     }
 
     &.theme-dark .mobile-toolbar {
-        background-color: rgb(43, 43, 43);
+        background-color: rgb(43 43 43);
     }
 
     .mobile-navbar,
@@ -18,8 +18,8 @@ body.is-mobile {
     }
 
     .mobile-navbar {
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0) 100%);
+        background: rgb(0 0 0);
+        background: linear-gradient(0deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 80%) 75%, rgb(0 0 0 / 0%) 100%);
     }
 
     .mobile-navbar-action {
@@ -28,10 +28,9 @@ body.is-mobile {
     }
 
     .mobile-navbar-tabs-action {
-        border-width: var(--icon-l-stroke-width);
-        border-radius: 30%;
-        width: calc(var(--icon-size) - 2px);
-        height: calc(var(--icon-size) - 2px);
+        border-width: var(--icon-s-stroke-width);
+        width: calc(var(--icon-size));
+        height: calc(var(--icon-size));
     }
 
     .mobile-toolbar-option {
