@@ -1,10 +1,6 @@
 body.is-mobile {
-    &.theme-light .workspace .mod-root .workspace-leaf .view-header::before {
+    &.theme-light .workspace .mod-root .workspace-leaf .view-header {
         background-color: rgb(from var(--background-primary) r g b / 50%) !important;
-    }
-
-    &.theme-dark .workspace .mod-root .workspace-leaf .view-header::before {
-        background-color: rgb(from var(--background-primary) r g b / 75%) !important;
     }
 
     .view-actions {
@@ -23,17 +19,10 @@ body.is-mobile {
 
     .workspace .mod-root .workspace-leaf .view-header {
         height: fit-content;
-
-        &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            backdrop-filter: blur(50px);
-            width: 100%;
-            height: 100%;
-            content: "";
-        }
+        background: linear-gradient(to bottom,
+                rgb(from var(--background-primary) r g b / 90%) 0%,
+                rgb(from var(--background-primary) r g b / 70%) 100%);
+        backdrop-filter: blur(50px);
     }
 }
 
@@ -41,7 +30,6 @@ body.is-phone {
 
     .workspace .mod-root .workspace-leaf .view-header {
         position: fixed;
-        background-color: transparent;
         padding-top: var(--safe-area-inset-top);
         width: 100%;
 
