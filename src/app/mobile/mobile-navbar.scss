@@ -7,17 +7,13 @@ body.is-mobile {
         background-color: rgb(43 43 43);
     }
 
-    .mobile-navbar,
-    .workspace-drawer .nav-header {
+    .mobile-navbar {
         position: fixed;
         right: 0;
         bottom: 0;
         left: 0;
         z-index: var(--layer-status-bar);
         border: none;
-    }
-
-    .mobile-navbar {
         background: rgb(0 0 0);
         background: linear-gradient(0deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 80%) 75%, rgb(0 0 0 / 0%) 100%);
     }
@@ -49,18 +45,42 @@ body.is-mobile {
         padding: 4px max(var(--safe-area-inset-right), 16px) max(4px, var(--safe-area-inset-bottom)) max(var(--safe-area-inset-left), 16px);
     }
 
-    .nav-buttons-container {
-        justify-content: space-between;
-        padding: 0;
-    }
+    .workspace-drawer {
+        .nav-header {
+            z-index: var(--layer-status-bar);
+            border: none;
+            padding: 0 16px max(var(--size-4-2), var(--safe-area-inset-bottom)) !important;
+        }
 
-    .nav-action-button {
-        flex-grow: 0 !important;
+        .nav-buttons-container {
+            justify-content: space-around;
+            padding: 0;
+            gap: var(--size-4-4);
+        }
+
+        .nav-action-button {
+            flex-grow: 1 !important;
+            border: 1px solid rgb(from var(--nav-item-background-hover) r g b / 5%);
+            height: 52px;
+        }
+
+        .nav-file-title.is-active {
+            background-color: var(--nav-item-background-hover);
+        }
+
+        // left padding is adjusted to compensate the hardcoded negative margin-inline-start
+        .nav-files-container > div {
+            padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-4);
+        }
+
+        .nav-files-container .tree-item {
+            padding: 0 0 0 var(--size-4-2);
+        }
     }
 
     &.theme-dark {
 
-        .workspace-drawer .nav-header .nav-buttons-container {
+        .workspace-drawer .nav-header .nav-buttons-container .nav-action-button {
             background-color: var(--background-secondary-alt);
             box-shadow: var(--shadow-s);
             border-radius: var(--radius-m);
