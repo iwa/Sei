@@ -64,7 +64,9 @@ body {
         }
     }
 
-    .mod-left-split .mod-top {
+    .mod-left-split .mod-top,
+    &.sei-enable-labeled-nav-everywhere .mod-left-split .workspace-tabs,
+    &.sei-enable-labeled-nav-everywhere .mod-right-split .workspace-tabs {
 
         .workspace-tab-header-spacer {
             display: none
@@ -107,10 +109,10 @@ body {
             }
 
             .workspace-tab-container-inner {
-				flex-grow: 1;
-				gap: 0;
-				padding: var(--size-4-2) var(--size-4-3);
-			}
+                flex-grow: 1;
+                gap: 0;
+                padding: var(--size-4-2) var(--size-4-3);
+            }
         }
 
         .workspace-tab-header {
@@ -166,4 +168,5 @@ body {
             padding: 0;
         }
     }
+
 }
