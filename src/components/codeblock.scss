@@ -5,13 +5,11 @@ body {
     --code-size: var(--font-smaller);
     --code-background: var(--background-primary-alt);
 
+    // todo rework accented color
     .markdown-rendered pre,
     .HyperMD-codeblock {
         box-shadow: rgb(0 0 0 / 8%) 0 2px 6px;
-        background: linear-gradient(
-            hsla(var(--color-accent-hsl), calc(var(--sei-accented-frame-opacity) * 0.005)),
-            hsla(var(--color-accent-hsl), calc(var(--sei-accented-frame-opacity) * 0.005))
-          ), var(--code-background);
+        background-color: var(--code-background);
     }
 }
 
