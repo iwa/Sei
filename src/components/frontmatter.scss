@@ -4,6 +4,7 @@ body .metadata-properties-heading {
 
 .metadata-container {
     --icon-size: 16px;
+
     transform: none;
 
     .metadata-properties-heading {
@@ -43,6 +44,16 @@ body .metadata-properties-heading {
 }
 
 body:not(.is-mobile) {
+    .markdown-reading-view {
+        .metadata-container {
+            pointer-events: none;
+
+            .multi-select-pill-remove-button {
+                display: none;
+            }
+        }
+    }
+
     .metadata-add-button {
         display: flex;
         transition: var(--anim-duration-fast) var(--anim-duration-moderate);
