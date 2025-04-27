@@ -40,10 +40,23 @@ settings:
         description: Align tabs back to the left
         type: class-toggle
     -
-        id: sei-enable-labeled-nav-everywhere
-        title: Enable Labeled Navs on every Nav Tabs
-        description: Replace every navigation buttons with icon + label style, like in the top left corner
-        type: class-toggle
+        id: sei-select-labeled-nav
+        title: Enable Labeled Navs
+        description: Replace navigation buttons with icon + label style
+        type: class-select
+        allowEmpty: false
+        default: sei-enable-labeled-nav
+        options:
+            -
+                label: Disable
+                value: sei-disable-labeled-nav
+            -
+                label: Labeled nav
+                value: sei-enable-labeled-nav
+            -
+                label: Labaled nav everywhere
+                value: sei-enable-labeled-nav-everywhere
+
     -
         id: sei-header-colors
         title: 🎨 Colors

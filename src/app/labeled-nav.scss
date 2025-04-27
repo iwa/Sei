@@ -1,9 +1,9 @@
-body.mod-windows,
-body.is-fullscreen:not(.colorful-frame) {
+body.mod-windows:not(.sei-disable-labeled-nav),
+body.is-fullscreen:not(.colorful-frame, .sei-disable-labeled-nav) {
     --labeled-nav-top-margin: 0;
 }
 
-body {
+body:not(.sei-disable-labeled-nav) {
     --labeled-nav-top-margin: var(--header-height);
 
     &.is-translucent {
