@@ -1,0 +1,16 @@
+// Core plugin: Bases
+
+// Force disable styles on inputs in bases table, as default styles do
+.bases-table-container input[type='text'],
+.bases-table-container input[type='date'],
+.bases-table-container input[type='datetime-local'],
+.bases-table-container input[type='number'],
+.bases-table-container .multi-select-container {
+
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none !important;
+        border: none !important;
+    }
+}
