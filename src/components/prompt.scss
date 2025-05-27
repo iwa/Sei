@@ -12,10 +12,10 @@ body:not(.is-phone) {
 
     .prompt-input {
         border-color: var(--background-modifier-border);
+        box-shadow: none !important;
         background-color: transparent;
-        font-size: var(--font-ui-large);
-        padding: 28px 28px; // x-axis needs to be .suggestion-item + 12px
-        font-size: 1.1em;
+        font-size: var(--font-ui-medium);
+        padding: 28px; // x-axis needs to be .suggestion-item + 12px
     }
 
     .prompt-instructions {
