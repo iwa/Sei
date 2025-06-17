@@ -42,16 +42,15 @@ body:not(.is-phone) {
 
 body.is-phone {
     .prompt {
-        --prompt-top: calc(var(--safe-area-inset-top) + 8px);
         animation: fade-in-down var(--anim-duration-fast) ease !important;
         transition: var(--anim-duration-fast);
-        margin-top: var(--prompt-top);
+        padding-bottom: 0;
         box-shadow: var(--shadow-l);
         border: var(--prompt-border-width) solid var(--background-modifier-hover);
         border-radius: var(--radius-l);
         background-color: var(--modal-background) !important;
-        width: 95vw;
-        height: 70vh;
+        width: 96vw;
+        height: 50vh;
     }
 
     .prompt-input {
