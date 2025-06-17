@@ -30,7 +30,6 @@ body.is-phone {
 
     .workspace .mod-root .workspace-leaf .view-header {
         position: fixed;
-        padding-top: var(--safe-area-inset-top);
         width: 100%;
 
         &:has(.view-header-breadcrumb) {

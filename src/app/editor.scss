@@ -160,11 +160,11 @@ body.is-phone {
 
     div:not(.markdown-embed-content)>.markdown-preview-view:first-child,
     div:not(.markdown-embed-content)>.cm-sizer:first-child {
-        padding-top: calc(var(--safe-area-inset-top) + var(--view-header-height) + 16px);
+        padding-top: calc(var(--view-header-height) + 16px);
     }
 
     .mod-root .view-content>div:not(.markdown-source-view, .markdown-reading-view, .canvas-wrapper, .empty-state) {
-        padding-top: calc(var(--safe-area-inset-top) + var(--view-header-height));
+        padding-top: var(--view-header-height);
     }
 }
 
@@ -172,11 +172,11 @@ body.is-tablet {
 
     div:not(.markdown-embed-content)>.markdown-preview-view:first-child,
     div:not(.markdown-embed-content)>.cm-sizer:first-child {
-        padding-top: calc(var(--safe-area-inset-top) + var(--header-height) + var(--view-header-height) + 16px);
+        padding-top: calc(var(--header-height) + var(--view-header-height) + 16px);
     }
 
     .mod-root .view-content>div:not(.markdown-source-view, .markdown-reading-view, .canvas-wrapper, .empty-state) {
-        padding-top: calc(var(--safe-area-inset-top) + var(--header-height) + var(--view-header-height));
+        padding-top: calc(var(--header-height) + var(--view-header-height));
     }
 
     .mod-root .workspace-leaf {
