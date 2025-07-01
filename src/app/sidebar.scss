@@ -95,11 +95,6 @@ body:not(.is-mobile) {
         }
     }
 
-    // Text positioning
-    .tree-item-self:not(.mod-collapsible) {
-        gap: 4px;
-    }
-
     // Add the little accent bar on active
     .tree-item-self.is-active::after,
     .vertical-tab-nav-item.is-active::after {
