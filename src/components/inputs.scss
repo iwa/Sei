@@ -46,6 +46,7 @@ body {
         // Range input styles
         input[type="range"]::-webkit-slider-thumb {
             transition: var(--anim-duration-fast);
+            background-color: var(--text-muted);
             box-shadow: 0 0.5px 1px 1px rgb(0 0 0 / 10%);
         }
 
