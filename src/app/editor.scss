@@ -5,21 +5,9 @@
     transition: var(--anim-duration-fast) ease-in-out;
 }
 
-.markdown-preview-view {
-    scrollbar-gutter: auto;
-}
-
 .mod-root .workspace-leaf-content[data-mode="source"] .view-header .view-actions button:nth-last-child(2) {
     background-color: var(--interactive-accent) !important;
     color: var(--text-on-accent) !important;
-}
-
-.workspace-leaf-content[data-mode="source"] .markdown-reading-view {
-    transform: scale(0.99);
-}
-
-.workspace-leaf-content[data-mode="preview"] .markdown-source-view {
-    transform: scale(0.99);
 }
 
 .workspace-tabs {
