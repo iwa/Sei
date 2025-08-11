@@ -3,7 +3,7 @@ body.is-fullscreen:not(.colorful-frame, .sei-disable-labeled-nav) {
     --labeled-nav-top-margin: 0;
 }
 
-body:not(.sei-disable-labeled-nav) {
+body:not(.sei-disable-labeled-nav, .is-mobile) {
     --labeled-nav-top-margin: var(--header-height);
 
     &.is-translucent {
