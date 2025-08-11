@@ -1,0 +1,53 @@
+body:not(.is-mobile) {
+  // Background colors transparent everywhere except editors so main container bg color apply everywhere
+  background-color: var(--background-secondary);
+
+  .workspace-ribbon,
+  .workspace-split.mod-root,
+  .workspace-split.mod-sidedock,
+  .workspace-tabs .workspace-leaf,
+  .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    background-color: transparent;
+  }
+
+  // feature: accented frame
+  .workspace {
+    background-color: hsla(var(--color-accent-hsl), calc(var(--sei-accented-frame-opacity) * 0.005));
+  }
+
+  // z-index above sidedocks (10)
+  .workspace-split.mod-root {
+    z-index: 20;
+  }
+
+  // Reduce window opacity when unfocused
+  &:not(.is-focused) {
+
+    .workspace-ribbon,
+    .mod-sidedock>div,
+    .mod-root .workspace-tab-header-container {
+      opacity: 0.5;
+      transition: all 1s ease;
+      transition-delay: 5s;
+    }
+  }
+
+  // Hide border between editors todo to remove?
+  .workspace-leaf-resize-handle {
+    border-inline-end-color: transparent;
+  }
+
+  // Remove all borders except horizontal in sidedocks
+  .workspace {
+    --tab-outline-color: transparent;
+    --tab-outline-width: 0;
+    --divider-width: 0;
+    --tab-container-background: transparent;
+    --titlebar-background: transparent;
+    --titlebar-background-focused: transparent;
+  }
+
+  .mod-sidedock > .workspace-tabs > .workspace-leaf-resize-handle {
+    --divider-width: 1px;
+  }
+}
