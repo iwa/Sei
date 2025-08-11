@@ -23,15 +23,17 @@
     display: none;
 }
 
-
+// Image render
 img {
     border-radius: var(--radius-s);
 }
 
+// Icons render
 svg.svg-icon {
     fill: none;
 }
 
+// Inline code render
 .markdown-rendered code,
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
     border: var(--border-width) solid var(--background-modifier-border);
@@ -57,6 +59,7 @@ svg.svg-icon {
     inset-inline-end: 36px;
 }
 
+// Highlighter render
 .markdown-rendered mark,
 .cm-s-obsidian span.cm-formatting-highlight,
 .cm-s-obsidian span.cm-highlight {
