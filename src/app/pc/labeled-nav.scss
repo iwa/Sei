@@ -76,7 +76,6 @@ body:not(.sei-disable-labeled-nav, .is-mobile) {
             display: inline-block;
             font-weight: 500;
             font-size: var(--font-ui-small);
-            margin-bottom: -3px; // to help vertically center text with icons
         }
 
         .workspace-tab-header-container {
