@@ -15,9 +15,9 @@ body:not(.is-mobile) {
     background-color: hsla(var(--color-accent-hsl), calc(var(--sei-accented-frame-opacity) * 0.005));
   }
 
-  // z-index above sidedocks (10) and under status bar (15)
+  // z-index same as side-docks so editor drop shadow goes above them
   .workspace-split.mod-root {
-    z-index: 12;
+    z-index: var(--layer-sidedock);
   }
 
   // Reduce window opacity when unfocused
