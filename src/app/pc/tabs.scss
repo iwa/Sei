@@ -1,0 +1,27 @@
+// Desktop tabs
+body:not(.is-mobile) {
+  // Margin around editor tabs to get floaty design
+  .mod-root .workspace-tab-header-container-inner {
+    margin: 6px 0;
+  }
+
+  // Cleaner margin around for icon tabs in sidedocks
+  .mod-sidedock .workspace-tab-header-container-inner {
+    margin: 6px 0;
+  }
+
+  // Windows & Linux
+  body.mod-windows.is-hidden-frameless,
+  body.mod-linux.is-hidden-frameless {
+    &.show-ribbon {
+      .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
+        padding-left: 0;
+      }
+
+      .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
+        z-index: 11;
+        margin-left: 0;
+      }
+    }
+  }
+}
