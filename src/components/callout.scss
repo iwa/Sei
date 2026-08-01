@@ -4,8 +4,8 @@ body {
 }
 
 .callout {
-    background-color: rgba(var(--callout-color), 0.15);
-    border-left: var(--size-2-3) solid rgba(var(--callout-color), 0.9);
+    background-color: color-mix(in srgb, var(--callout-color) 15%, transparent);
+    border-left: var(--size-2-3) solid color-mix(in srgb, var(--callout-color) 90%, transparent);
 
     p:last-child {
         margin-bottom: 0;
