@@ -3,7 +3,7 @@ body.is-fullscreen:not(.colorful-frame, .sei-disable-labeled-nav) {
     --labeled-nav-top-margin: 0;
 }
 
-body:not(.sei-disable-labeled-nav) {
+body:not(.sei-disable-labeled-nav, .is-mobile) {
     --labeled-nav-top-margin: var(--header-height);
 
     &.is-translucent {
@@ -76,7 +76,6 @@ body:not(.sei-disable-labeled-nav) {
             display: inline-block;
             font-weight: 500;
             font-size: var(--font-ui-small);
-            margin-bottom: -3px; // to help vertically center text with icons
         }
 
         .workspace-tab-header-container {

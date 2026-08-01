@@ -8,6 +8,7 @@
 
 // Theme
 @use "app/workspace";
+@use "app/pc/workspace" as workspacePC;
 @use "app/workspace-drawer-vault";
 
 @use "app/general";
@@ -15,6 +16,7 @@
 @use "app/sidebar";
 @use "app/ribbon";
 @use "app/tabs";
+@use "app/pc/tabs" as tabsPC;
 
 @use "app/editor";
 
@@ -38,7 +40,7 @@
 
 // Features
 @use "app/new-tab";
-@use "app/labeled-nav";
+@use "app/pc/labeled-nav";
 @use "app/settings";
 @use "app/notice";
 @use "app/status-bar";

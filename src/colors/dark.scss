@@ -1,10 +1,10 @@
 .theme-dark {
     color-scheme: dark;
 
-    --background-primary: hsl(220deg 2% 15%);
+    --background-primary: hsl(220deg 2% 15%); // bright dark for editors, popups etc...
     --background-primary-alt: hsl(220deg 2% 13%);
 
-    --background-secondary: hsl(220deg 2% 13%);
+    --background-secondary: hsl(220deg 2% 13%); // bright dark for editors, popups etc...
     --background-secondary-alt: hsl(220deg 2% 15%);
 
     --background-table-rows: hsl(220deg 2% 13%);

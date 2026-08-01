@@ -1,3 +1,4 @@
+// Change what's shown when on a empty tab "new tab"
 .view-header,
 .view-content,
 .workspace-tab-container {
@@ -12,8 +13,7 @@
         position: relative;
         justify-content: center;
         align-items: center;
-        margin: 0;
-        margin-top: var(--view-header-height);
+        margin: var(--view-header-height) 0 0;
         padding: var(--file-margins);
         width: 100%;
         max-width: 100%;

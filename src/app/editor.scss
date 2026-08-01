@@ -5,21 +5,9 @@
     transition: var(--anim-duration-fast) ease-in-out;
 }
 
-.markdown-preview-view {
-    scrollbar-gutter: auto;
-}
-
 .mod-root .workspace-leaf-content[data-mode="source"] .view-header .view-actions button:nth-last-child(2) {
     background-color: var(--interactive-accent) !important;
     color: var(--text-on-accent) !important;
-}
-
-.workspace-leaf-content[data-mode="source"] .markdown-reading-view {
-    transform: scale(0.99);
-}
-
-.workspace-leaf-content[data-mode="preview"] .markdown-source-view {
-    transform: scale(0.99);
 }
 
 .workspace-tabs {
@@ -35,15 +23,17 @@
     display: none;
 }
 
-
+// Image render
 img {
     border-radius: var(--radius-s);
 }
 
+// Icons render
 svg.svg-icon {
     fill: none;
 }
 
+// Inline code render
 .markdown-rendered code,
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
     border: var(--border-width) solid var(--background-modifier-border);
@@ -69,6 +59,7 @@ svg.svg-icon {
     inset-inline-end: 36px;
 }
 
+// Highlighter render
 .markdown-rendered mark,
 .cm-s-obsidian span.cm-formatting-highlight,
 .cm-s-obsidian span.cm-highlight {

@@ -2,150 +2,141 @@
 
 // Desktop & Tablet
 body:not(.is-phone) {
-    .workspace {
-        .workspace-tab-header-container-inner {
-            position: relative;
-            border-radius: var(--tab-radius);
-            padding: 0;
-            margin-right: var(--size-2-2);
-        }
+  --tab-radius-active: var(--radius-m);
+  --tab-radius: var(--radius-m);
 
-        // + & sidear toggle buttons
-        .workspace-tab-header-new-tab .clickable-icon,
-        .sidebar-toggle-button .clickable-icon {
-            padding: 7px; // var(--size-4-2) - 1px to match tabs height
-        }
-
-        // Tab list button
-        .workspace-tab-header-tab-list .clickable-icon {
-            padding: 7px var(--size-2-1);
-        }
-
-        // Remove padding and vertically center the sidebar toggle icon inside the div like + & tab icons
-        // Fixes hover area to match the actual icon  like + & tab icons
-        .sidebar-toggle-button {
-            padding: 1px 0 0;
-            align-items: center;
-        }
-
-        .mod-root {
-
-            .workspace-tab-header-container-inner {
-                flex-grow: 1;
-                gap: var(--size-2-2);
-            }
-
-            .workspace-tab-header-spacer {
-                display: none;
-            }
-
-            .workspace-tab-header {
-                opacity: 0.5;
-                border: none;
-                background-color: var(--background-modifier-hover);
-                padding: 0;
-                transition: 160ms ease-out, opacity 120ms ease-in-out;
-                flex-grow: 1;
-
-                &::before,
-                &::after {
-                    display: none;
-                }
-            }
-
-            .workspace-tab-header.is-active {
-                --tab-max-width: 220px;
-
-                opacity: 1;
-                box-shadow: none;
-                flex-grow: 1.25;
-            }
-
-            .workspace-tab-header-inner {
-                padding-inline: 12px 8px;
-            }
-
-            .workspace-tab-header-inner-title {
-                line-height: normal;
-            }
-
-            .workspace-tab-header-status-container {
-                position: absolute;
-                right: 8px;
-            }
-
-            .workspace-tab-header-new-tab,
-            .workspace-tab-header-tab-list {
-                margin: 0;
-                padding: unset;
-            }
-
-            .workspace-tabs.mod-active {
-                z-index: var(--layer-sidedock);
-            }
-        }
-    }
-
-    .workspace .mod-sidedock {
-        .workspace-tab-header-container-inner {
-            gap: 0;
-            transition: var(--anim-duration-fast);
-        }
-
-        .workspace-tab-header.is-active,
-        .workspace-tab-header-container-inner:hover {
-            background-color: var(--background-modifier-hover);
-        }
-
-        .workspace-tab-header-inner {
-            padding: 0 10px;
-        }
-
-        .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
-            opacity: 0.5;
-        }
-    }
-}
-
-// Desktop
-body:not(.is-mobile) {
+  .workspace {
     .workspace-tab-header-container-inner {
-        margin: 6px 0;
+      position: relative;
+      border-radius: var(--tab-radius);
+      padding: 0;
+      margin-right: var(--size-2-2);
     }
-}
 
-// Windows & Linux
-body.mod-windows.is-hidden-frameless,
-body.mod-linux.is-hidden-frameless {
-    &.show-ribbon {
-        .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
-            padding-left: 0;
-        }
-
-        .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
-            z-index: 11;
-            margin-left: 0;
-        }
+    // + & sidear toggle buttons
+    .workspace-tab-header-new-tab .clickable-icon,
+    .sidebar-toggle-button .clickable-icon {
+      padding: 7px; // var(--size-4-2) - 1px to match tabs height
     }
+
+    // Tab list button
+    .workspace-tab-header-tab-list .clickable-icon {
+      padding: 7px var(--size-2-1);
+    }
+
+    // Remove padding and vertically center the sidebar toggle icon inside the div like + & tab icons
+    // Fixes hover area to match the actual icon  like + & tab icons
+    .sidebar-toggle-button {
+      padding: 1px 0 0;
+      align-items: center;
+    }
+
+
+    // Editor tabs styling
+    .mod-root {
+      // Gap between tabs
+      .workspace-tab-header-container-inner {
+        flex-grow: 1;
+        gap: var(--size-2-2);
+      }
+
+      .workspace-tab-header-spacer {
+        display: none;
+      }
+
+      // Tab styling
+      .workspace-tab-header {
+        opacity: 0.5;
+        border: none;
+        background-color: var(--background-modifier-hover);
+        padding: 0;
+        transition: 160ms ease-out, opacity 120ms ease-in-out;
+        flex-grow: 1;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      // Active tab styling
+      .workspace-tab-header.is-active {
+        --tab-max-width: 220px;
+
+        opacity: 1;
+        box-shadow: none;
+        flex-grow: 1.25;
+      }
+
+      .workspace-tab-header-inner {
+        padding-inline: 12px 8px;
+      }
+
+      .workspace-tab-header-inner-title {
+        line-height: normal;
+      }
+
+      .workspace-tab-header-status-container {
+        position: absolute;
+        right: 8px;
+      }
+
+      .workspace-tab-header-new-tab,
+      .workspace-tab-header-tab-list {
+        margin: 0;
+        padding: unset;
+      }
+
+      // Active editor to be above other editor so backdrop shadow overflows nicely
+      .workspace-tabs.mod-active {
+        z-index: var(--layer-sidedock);
+      }
+    }
+  }
+
+  .workspace .mod-sidedock {
+    // Align border radius for sidedocks tabs icons to be radius-m
+    .workspace-tab-header {
+      border-radius: var(--radius-m);
+    }
+
+    .workspace-tab-header-container-inner {
+      gap: 2px;
+      transition: var(--anim-duration-fast);
+    }
+
+    .workspace-tab-header.is-active,
+    .workspace-tab-header-container-inner:hover {
+      background-color: var(--background-modifier-hover);
+    }
+
+    .workspace-tab-header-inner {
+      padding: 0 7px;
+    }
+
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
+      opacity: 0.5;
+    }
+  }
 }
 
 // Tablet
 body.is-tablet {
-    .workspace-tab-header-container {
-        padding: 0 16px !important;
-    }
+  .workspace-tab-header-container {
+    padding: 0 16px !important;
+  }
 
-    .workspace-tab-header-container-inner {
-        margin: 6px 0;
-        padding-left: 88px !important;
-    }
+  .workspace-tab-header-container-inner {
+    margin: 6px 0;
+    padding-left: 88px !important;
+  }
 }
 
 // Feature: Centered tabs (Desktop & Tablet)
 body:not(.sei-disable-centered-tabs, .is-phone) {
-    .workspace {
-        .workspace-tab-header-container-inner {
-            justify-content: center;
-        }
+  .workspace {
+    .workspace-tab-header-container-inner {
+      justify-content: center;
     }
+  }
 }
